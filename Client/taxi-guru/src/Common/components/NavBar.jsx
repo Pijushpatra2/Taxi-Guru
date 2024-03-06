@@ -14,16 +14,16 @@ function NavBar() {
         />
         <div>
           <ul className="flex justify-end items-center">
-            <li className="my-6 px-8 py-1 text-2xl  hover:bg-[#fa8907] rounded-3xl">
+            <li className="my-6 px-8 py-1 text-2xl  hover:bg-primary rounded-3xl">
               HOME
             </li>
-            <li className="my-6 px-8 py-1 text-2xl hover:bg-[#fa8907] rounded-2xl">
+            <li className="my-6 px-8 py-1 text-2xl hover:bg-primary rounded-2xl">
               ABOUT US
             </li>
-            <li className="my-6 px-8 py-1  text-2xl hover:bg-[#fa8907] rounded-2xl">
+            <li className="my-6 px-8 py-1  text-2xl hover:bg-primary rounded-2xl">
               SERVICES
             </li>
-            <li className="my-6 mr-4 px-8 py-1 text-2xl hover:bg-[#fa8907] rounded-2xl">
+            <li className="my-6 mr-4 px-8 py-1 text-2xl hover:bg-primary rounded-2xl">
               CONTACT US
             </li>
           </ul>

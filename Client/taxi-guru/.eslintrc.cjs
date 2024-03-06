@@ -13,7 +13,7 @@ module.exports = {
   plugins: ["react-refresh"],
   rules: {
     "no-unused-vars": [
-      "warning",
+      1,
       { vars: "all", args: "after-used", ignoreRestSiblings: false },
     ],
     "react/jsx-no-target-blank": "off",
