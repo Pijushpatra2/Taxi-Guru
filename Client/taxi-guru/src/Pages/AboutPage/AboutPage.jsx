@@ -21,6 +21,14 @@ function AboutPage() {
         and trust “the taxi guru” for a dependable, secure, and pleasant
         excursion.
       </div>
+      <div>
+      </div>
+
+
+
+
+
+      
     </div>
   );
 }
