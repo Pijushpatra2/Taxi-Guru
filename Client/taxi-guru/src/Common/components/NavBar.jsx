@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import logo from "/images/common/logo.png";
+
 function NavBar() {
   const [showService, setshowService] = useState(false);
 
@@ -24,6 +25,8 @@ function NavBar() {
               SERVICES
             </li>
             <li className="my-6 mr-4 px-8 py-1 text-2xl hover:bg-primary rounded-2xl">
+            
+            
               CONTACT US
             </li>
           </ul>
