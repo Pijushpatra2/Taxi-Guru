@@ -19,8 +19,7 @@ export default function CountUpComponent(props) {
             enableScrollSpy={true}
             className="font-bold text-5xl text-white"
             suffix="+"
-          />
-          +
+          ></CountUp>
         </div>
         <div className="uppercase text-3xl font-bold text-primary">
           {props.title}

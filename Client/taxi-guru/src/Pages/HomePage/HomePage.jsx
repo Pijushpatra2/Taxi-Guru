@@ -1,17 +1,14 @@
 import { useState } from "react";
-import homeImage_1 from "/images/home/home_1.jpeg";
 import Cards from "./components/Cards";
 import home_taxi from "/images/home/home_taxi.png";
-import home_taxi_line from "/images/home/home_taxi_line.png";
 import CountUpComponent from "./components/CountUpComponent";
 import { Button } from "@mui/material";
 
 export default function HomePage() {
   const [activeTab, setActiveTab] = useState("tab1");
-  const handelChange = (tab) => {
+  const handleChange = (tab) => {
     setActiveTab(tab);
   };
-
   return (
     <div>
       <div>
@@ -19,7 +16,7 @@ export default function HomePage() {
           className={`bg-cover bg-center h-screen  bg-no-repeat bg-[url('/images/home/home_1.jpeg')] flex justify-center items-center`}
         >
           <div className="font-extrabold text-8xl text-white">
-            “Let's roll! Book your taxi!"
+            &ldquo;Let&apos;s roll! Book your taxi!&rdquo;
           </div>
         </div>
         {/* TAB  */}
@@ -28,7 +25,7 @@ export default function HomePage() {
             <Button
               variant="contained"
               size="small"
-              onClick={() => handelChange("tab1")}
+              onClick={() => handleChange("tab1")}
               className={activeTab === "tab1" ? "active" : ""}
             >
               Tab 1
@@ -36,7 +33,7 @@ export default function HomePage() {
             <Button
               variant="contained"
               size="small"
-              onClick={() => handelChange("tab2")}
+              onClick={() => handleChange("tab2")}
               className={activeTab === "tab2" ? "active" : ""}
             >
               Tab 2
@@ -44,7 +41,7 @@ export default function HomePage() {
             <Button
               variant="contained"
               size="small"
-              onClick={() => handelChange("tab3")}
+              onClick={() => handleChange("tab3")}
               className={activeTab === "tab3" ? "active" : ""}
             >
               Tab 3
