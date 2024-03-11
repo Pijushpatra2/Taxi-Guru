@@ -1,18 +1,84 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import logo from "/images/common/logo.png";
 import { NavLink } from "react-router-dom";
+import { HiMenu, HiX } from "react-icons/hi";
+import { styles } from "../../Style";
 
 function NavBar() {
   const [toggle, setToggle] = useState(false);
+
+  const handleToggle = () => {
+    setToggle(!toggle);
+  };
+
   return (
     <div>
-      <nav className="text-white bg-black flex justify-between">
-        <NavLink to="/">
-          <img className="inline" src={logo} alt="Logo" />
-        </NavLink>
-        <div>
-          <ul className="flex justify-end items-center uppercase">
+      <nav
+        className={`${styles.paddingX} w-full text-white bg-black flex top-0 `}
+      >
+        <div className="w-full flex justify-between items-center mx-auto">
+          <NavLink to="/">
+            <img className="inline object-contain" src={logo} alt="Logo" />
+          </NavLink>
+          <div className="">
+            <ul className="hidden lg:flex flex-row gap-8">
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  `my-6 px-4 py-1 text-2xl  hover:bg-primary rounded-full mx-2 ${
+                    isActive ? "bg-primary" : ""
+                  }`
+                }
+              >
+                HOME
+              </NavLink>
+              <NavLink
+                to="/about-us"
+                className={({ isActive }) =>
+                  `my-6 px-4 py-1 text-2xl  hover:bg-primary rounded-full mx-2 ${
+                    isActive ? "bg-primary" : ""
+                  }`
+                }
+              >
+                ABOUT US
+              </NavLink>
+              <NavLink
+                to="/services"
+                className={({ isActive }) =>
+                  `my-6 px-4 py-1 text-2xl  hover:bg-primary rounded-full mx-2 ${
+                    isActive ? "bg-primary" : ""
+                  }`
+                }
+              >
+                SERVICES
+              </NavLink>
+              <NavLink
+                to="/contact-us"
+                className={({ isActive }) =>
+                  `my-6 px-4 py-1 text-2xl  hover:bg-primary rounded-full mx-2 ${
+                    isActive ? "bg-primary" : ""
+                  }`
+                }
+              >
+                CONTACT US
+              </NavLink>
+            </ul>
+          </div>
+        </div>
+
+        {/* Toggle button */}
+        <button
+          className="lg:hidden flex items-center px-3 py-2 text-white"
+          onClick={handleToggle}
+        >
+          {toggle ? <HiX size={24} /> : <HiMenu size={24} />}
+        </button>
+      </nav>
+
+      {/* Responsive */}
+      {toggle && (
+        <div className="lg:hidden bg-black text-white">
+          <ul className="flex flex-col items-center">
             <NavLink
               to="/"
               className={({ isActive }) =>
@@ -20,6 +86,7 @@ function NavBar() {
                   isActive ? "bg-primary" : ""
                 }`
               }
+              onClick={handleToggle}
             >
               HOME
             </NavLink>
@@ -30,9 +97,10 @@ function NavBar() {
                   isActive ? "bg-primary" : ""
                 }`
               }
+              onClick={handleToggle}
             >
               ABOUT US
-            </NavLink>{" "}
+            </NavLink>
             <NavLink
               to="/services"
               className={({ isActive }) =>
@@ -40,9 +108,10 @@ function NavBar() {
                   isActive ? "bg-primary" : ""
                 }`
               }
+              onClick={handleToggle}
             >
               SERVICES
-            </NavLink>{" "}
+            </NavLink>
             <NavLink
               to="/contact-us"
               className={({ isActive }) =>
@@ -50,25 +119,13 @@ function NavBar() {
                   isActive ? "bg-primary" : ""
                 }`
               }
+              onClick={handleToggle}
             >
               CONTACT US
             </NavLink>
           </ul>
         </div>
-        <div className="sm:hidden flex flex-1 justify-end items-center">
-          <img
-            src={toggle ? close : menu}
-            alt="menu"
-            className="w-[28px] h-[28px] object-contain cursor-pointer"
-            onClick={() => setToggle(!toggle)}
-          />
-          <div
-            className={`${
-              !toggle ? "hidden" : "flex"
-            } p-6 black-gradient absolute top-20 right-0 my-2 mx-4 min-w-[140px] z-10 rounded-xl`}
-          ></div>
-        </div>
-      </nav>
+      )}
     </div>
   );
 }
