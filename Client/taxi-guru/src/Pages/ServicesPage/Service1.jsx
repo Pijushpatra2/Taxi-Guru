@@ -10,7 +10,7 @@ export default function Service1() {
       {/* background pic */}
       <img
         src={Bg}
-        className="h-[680px] w-screen bg-cover object-cover "
+        className=" w-[100%] bg-cover object-cover "
         alt="error"
       />
       {/* 1st conatiner */}

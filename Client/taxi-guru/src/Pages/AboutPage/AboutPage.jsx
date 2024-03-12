@@ -1,6 +1,10 @@
 import React from "react";
 import about1 from "/images/about us/about1.png";
 import about2 from "/images/about us/about2.png";
+import gallery from "/images/about us/gallery.png";
+import section from "/images/about us/section.png";
+import action1 from "/images/about us/action 1.png";
+import Footer1 from "../../Common/components/Footer1";
 
 import car from "/images/home/home_1.jpeg";
 
@@ -12,7 +16,7 @@ function AboutPage() {
       </div>
 
       <div className="h-[20%] w-[100%]  flex  justify-between mt-16 ">
-        <div className=" h-[500px] w-[45%]  font-sans text-[21.5px] ml-[5%] ">
+        <div className=" h-[500px] w-[30%]  font-sans text-[22px] ml-[8%] ">
           <div className="mb-5">
             <b className=" text-[#FA8907] text-6xl font-medium ">Who we are?</b>
           </div>
@@ -36,7 +40,7 @@ function AboutPage() {
       {/* 2nd div */}
 
       <div className="h-[30%] w-[100%]  flex  flex-row-reverse justify-between mt-16 ">
-        <div className=" h-[560px] w-[50%]  font-sans text-[22px] mr-[5%]">
+        <div className=" h-[560px] w-[50%]  font-sans text-[22px] mr-[2%] ml-[3%]">
           <div className="mb-5">
             <b className=" text-[#FA8907] text-6xl font-medium ml-[125px]">
               Our Mission
@@ -45,29 +49,79 @@ function AboutPage() {
           “At “the taxi guru”, our mission is to give protected, dependable, and
           advantageous transportation arrangements in Seunk Mullanpur, New
           Chandigarh, and beyond.
-          <br />
-          <br />
+          <br /> <br />
           We are focused on guaranteeing the prosperity of our travelers by
           keeping an fleet of well-equipped vehicles driven by proficient and
           respectful drivers.
-          <br />
-          <br />
+          <br /> <br />
           Through straightforward valuing, and a devotion to consumer loyalty,
           we mean to reclassify the movement experience for people and families.
-          <br />
-          <br />
+          <br /> <br />
           At “the taxi guru”, we don’t simply drive; we prepare for consistent,
           charming excursions, making each ride with us a vital encounter.”
-          <br />
+          
         </div>
 
-        <div className="w-[750px] ">
-          <img src={about2} className=" " alt="" />
+        <div className="h-[693px] w-[820px] ">
+          <img  src={about2} className="h-[600px] w-[950px]" alt="" />
         </div>
       </div>
 
+
+
+
+
+
+
+
       {/* deepam code */}
+      <h3 class="text-orange-500 font-bold text-6xl flex justify-center">
+      Why Choose Us?
+    </h3>
+    <div class="flex justify-center mt-14 ml-2">
+      <img src={gallery} alt="Why to choose" width="100%" margin-left="2px" />
     </div>
+    <div class="flex mt-14 ml-4 justify-evenly font-medium">
+      <div>
+        <p class="text-3xl ml-28 ">Safety Assurance</p>
+        <p class="mt-8 text-2xl text-center ml-3 pr-10">
+          For us, your security is our first concern. Our fleet goes through
+          customary support, and our expert drivers, dependent upon thorough
+          historical verifications, focus on your prosperity. 
+        </p>
+      </div>
+      <div>
+        <p class="text-3xl ml-32 pl-6 ">Reliable Service</p>
+        <p class="mt-8 text-2xl text-center ml-9  pl-4 ">
+          Rely on “the taxi guru” for reliable and trustworthy transportation.
+          Our obligation to provoke administration guarantees you arrive at your
+          objective on time, without fail.
+        </p>
+      </div>
+      <div class="">
+        <p class="text-3xl ml-52 pl-8 ">Affordability</p>
+        <p class="mt-8 text-2xl text-center  ml-20 pr-7">
+          We have confidence in conveying quality transportation at open rates.
+          Our obligation to moderateness guarantees you partake in an agreeable
+          and solid excursion without settling for less on help greatness.
+        </p>
+      </div>
+    </div>
+    <div class="mt-32">
+      <img src={section}alt="section" width="100%" height="23px" />
+    </div>   
+    <div>
+      <h2 class="text-orange-500 font-bold text-6xl flex justify-center mt-28">How To Book?</h2>
+      <p class="text-center mt-14 text-2xl px-7 tracking-wide" > Booking a ride with “the taxi guru” is fast and hassle-free. Choose the method that suits you best – use our easy to user-friendly app for consistent online appointments, visit our site to reserve a spot, or essentially call us. Our devoted client support group is prepared to help you. Partake in the accommodation of efficient booking, and trust us to give a reliable and agreeable excursion custom-made to your inclinations. Any place you’re going, “the taxi guru” is here to make your movement experience smooth and peaceful. </p>
+    </div>
+    <div class=" mt-24">
+      <img src={action1} alt="action1" width="100%" height="23px"/>
+    </div>
+    <div class="mt-48">
+    <Footer1></Footer1>
+    </div>
+    </div>
+
   );
 }
 
