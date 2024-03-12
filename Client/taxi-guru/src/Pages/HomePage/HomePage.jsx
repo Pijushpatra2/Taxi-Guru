@@ -4,7 +4,7 @@ import home_taxi from "/images/home/home_taxi.png";
 import CountUpComponent from "./components/CountUpComponent";
 import { Button } from "@mui/material";
 import Footer1 from "../../Common/components/Footer1";
-
+import home1 from "/images/home/home_1.jpeg";
 export default function HomePage() {
   const [activeTab, setActiveTab] = useState("tab1");
   const handleChange = (tab) => {
@@ -14,9 +14,9 @@ export default function HomePage() {
     <div>
       <div>
         <div
-          className={`bg-cover bg-center h-screen  bg-no-repeat bg-[url('/images/home/home_1.jpeg')] flex justify-center items-center`}
+          className={`bg-cover bg-center h-screen  bg-no-repeat bg-[url('${home1}')] flex justify-center items-center`}
         >
-          <div className="font-extrabold text-8xl text-white">
+          <div className="font-extrabold lg:text-8xl md:text-6xl text-5xl text-white  text-center">
             &ldquo;Let&apos;s roll! Book your taxi!&rdquo;
           </div>
         </div>
@@ -69,7 +69,7 @@ export default function HomePage() {
           </p>
         </div>
 
-        <div className="flex justify-around mt-16 px-8 items-center gap-x-20  ">
+        <div className="lg:flex justify-around   lg:px-8 items-start lg:gap-x-20  ">
           <Cards
             image={home_taxi}
             title="About Us"
@@ -87,21 +87,40 @@ export default function HomePage() {
           ></Cards>
         </div>
 
-        <div className="h-[32rem] bg-black flex justify-center items-center ">
-          <div>
-            <div className="flex justify-center items-center">
-              <img src={home_taxi} alt="" className="h-12" />
+        <div className=" bg-black flex flex-col justify-center pt-10 gap-2 text-white">
+          <div className="flex justify-center items-center ">
+            <img src={home_taxi} alt="" className="h-12" />
+          </div>
+          <div className="flex justify-center items-center ">
+            <p className="text-primary text-2xl	 ">WHAT WE OFFER </p>
+          </div>
+          <div className="flex justify-center items-center">
+            <p className="font-black text-white text-6xl">OUR SERVICES</p>
+          </div>
+          <p className="text-white text-4xl text-center">
+            Book Your Ride in Only a Couple of clicks!
+          </p>
+          <div className="lg:flex items-center justify-center  mt-4  gap-16">
+            <div className="flex flex-col justify-center items-center  ">
+              <div className="h-[80px] bg-primary w-[224px] rounded-3xl z-0"></div>
+              <div className="relative bottom-12  z-10">
+                <img className="max-w-[300px]" src={home1} alt="" />
+              </div>
+              <div className="h-[30px] relative  bottom-20 bg-primary w-[224px] rounded-t-3xl z-20"></div>
             </div>
-            <div className="flex justify-center items-center">
-              <p className="text-primary text-2xl	 ">WHAT WE OFFER </p>
+            <div className="flex flex-col justify-center items-center">
+              <div className="h-[80px] bg-primary w-[224px] rounded-3xl z-0"></div>
+              <div className="relative bottom-12  z-10">
+                <img className="max-w-[300px]" src={home1} alt="" />
+              </div>
+              <div className="h-[30px] relative  bottom-20 bg-primary w-[224px] rounded-t-3xl z-20"></div>
             </div>
-            <div className="flex justify-center items-center">
-              <p className="font-black text-white text-6xl">OUR SERVICES</p>
-            </div>
-            <div className="flex justify-center items-center">
-              <p className="text-white text-4xl">
-                Book Your Ride in Only a Couple of clicks!
-              </p>
+            <div className="flex flex-col justify-center items-center  ">
+              <div className="h-[80px] bg-primary w-[224px] rounded-3xl z-0"></div>
+              <div className="relative bottom-12  z-10">
+                <img className="max-w-[300px]" src={home1} alt="" />
+              </div>
+              <div className="h-[30px] relative  bottom-20 bg-primary w-[224px] rounded-t-3xl z-20"></div>
             </div>
           </div>
         </div>
@@ -122,7 +141,7 @@ export default function HomePage() {
             Where Every Ride is a Signature Experience..
           </p>
         </div>
-        <div className="h-[27rem] bg-black mt-16 mb-28 flex justify-center items-center">
+        <div className=" bg-black py-16 flex justify-center items-center ">
           <div className=" justify-center items-center">
             <div className="flex"></div>
             <div className="text-center">
@@ -142,7 +161,7 @@ export default function HomePage() {
               comfort at every turn with us
             </p>
 
-            <div className="flex mt-8">
+            <div className="md:flex mt-8 md:flex-wrap justify-center items-center flex flex-wrap ">
               <CountUpComponent
                 image={home_taxi}
                 end={100}
@@ -169,7 +188,7 @@ export default function HomePage() {
 
         {/* footer */}
 
-        <Footer1/>
+        <Footer1 />
       </div>
     </div>
   );
