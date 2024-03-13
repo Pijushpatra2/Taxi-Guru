@@ -14,8 +14,10 @@ export default function HomePage() {
     <div>
       <div>
         <div
+        
           className={`bg-cover bg-center h-screen  bg-no-repeat bg-[url('${home1}')] flex justify-center items-center`}
         >
+          
           <div className="font-extrabold lg:text-8xl md:text-6xl text-5xl text-white  text-center">
             &ldquo;Let&apos;s roll! Book your taxi!&rdquo;
           </div>

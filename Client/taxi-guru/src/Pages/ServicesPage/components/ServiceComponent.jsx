@@ -8,14 +8,14 @@ export default function ServiceComponent(props) {
     <div>
       <section>
         <div
-          className={`bg-[url('/images/services/bg.png')] bg-center bg-no-repeat bg-cover pt-8 pb-[100px] border-2`}
+          className={`bg-[url('/images/services/bg.png')] bg-center bg-no-repeat bg-cover pt-8 pb-[100px] `}
         >
-          <div className="text-center border-2 w-[60%] mx-auto">
+          <div className="text-center  w-[60%] mx-auto">
             <p className="text-white font-extrabold text-[64px]">
               Chandigarh to Delhi taxi Services
             </p>
           </div>
-          <div className="text-center border-2 mt-[100px]">
+          <div className="text-center  mt-[100px]">
             <p className="text-[32px] font-extrabold text-white">
               Book your taxi chadigarh to delhi at lowest price
             </p>
@@ -26,14 +26,19 @@ export default function ServiceComponent(props) {
         </div>
       </section>
       <section>
-        <div>
-          <img className="w-[100%] h-[400px]" src={Bg} alt="name" />
+        <div className= "h-[46.875rem]">
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224345.89797153295!2d77.04417330746466!3d28.527554408468337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x52c2b7494e204dce!2sNew%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1710326830618!5m2!1sen!2sin"  height="751" className="border:0; w-[100%]" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
+        {/* map here */}
+
+
+
       </section>
       <section>
         <div className="bg-[url('/images/services/bg.png')] p-8 bg-center bg-cover">
           <div>
-            <p className="border-2 text-white text-fa-bold text-[40px] text-center">
+            <p className=" text-white text-fa-bold text-[40px] text-center">
               Know about our services--
             </p>
             <p className="text-white text-[32px] mt-8">
@@ -70,15 +75,25 @@ export default function ServiceComponent(props) {
               visit thetaxiguru.com or call us today.
             </p>
           </div>
-          <div className="border-2 flex justify-center mt-4">
-            <div className="bg-[#fa8907] border-2 w-[20%] flex justify-center p-2 gap-2 rounded-full ">
+          <div className=" flex justify-center mt-4">
+            <div className="bg-[#fa8907]  w-[20%] flex justify-center p-2 gap-2 rounded-full ">
               <HiPhone size={35} />
               <p className=" text-[24px] font-bold">contact Us</p>
             </div>
           </div>
         </div>
       </section>
-      <div>{/* <Slider></Slider> */}</div>
+      <div className="h-[550px]">{/* <Slider></Slider> */}</div>
+      {/* footer */}
+      <div className="justify-between">
+          <div className=" flex  justify-between items-center bg-primary p-6   font-bold text-4xl relative opacity-90">
+            <div className="h-20 font-black py-4">Need Taxi ?</div>
+
+            <button className="bg-black uppercase text-white rounded-sm px-6 font-bold text-sm  py-2">
+              Contact
+            </button>
+          </div>
+        </div>
     </div>
   );
 }

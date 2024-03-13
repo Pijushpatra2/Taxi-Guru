@@ -40,8 +40,52 @@ function AboutPage() {
       </div>
 
       {/* 2nd div */}
+      <div className="flex flex-col md:flex md:flex-row-reverse justify-between mt-16 ">
+        <div className=" w-full md:w-2/5 lg:w-3/10 px-4 md:px-0">
+          <div className="mb-5">
+            <b className=" text-[#FA8907] text-6xl font-medium">
+              Our Mission
+            </b>
+          </div>
+          <p className="text-base md:text-lg lg:text-xl">
+          “At “the taxi guru”, our mission is to give protected, dependable, and
+          advantageous transportation arrangements in Seunk Mullanpur, New
+          Chandigarh, and beyond.
+          <br /> <br />
+          We are focused on guaranteeing the prosperity of our travelers by
+          keeping an fleet of well-equipped vehicles driven by proficient and
+          respectful drivers.
+          <br /> <br />
+          Through straightforward valuing, and a devotion to consumer loyalty,
+          we mean to reclassify the movement experience for people and families.
+          <br /> <br />
+          At “the taxi guru”, we don’t simply drive; we prepare for consistent,
+          charming excursions, making each ride with us a vital encounter.”
+          </p>
+        </div>
 
-      <div className="h-[30%] w-[100%]  flex  flex-row-reverse justify-between mt-16 ">
+        <div className="w-full md:w-3/5 lg:w-7/10 px-4 md:px-0 mt-8 md:mt-0 ">
+          <img src={about2} className="w-full h-auto" alt="" />
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      {/* <div className="h-[30%] w-[100%]  flex  flex-row-reverse justify-between mt-16 ">
         <div className=" h-[560px] w-[50%]  font-sans text-[22px] mr-[2%] ml-[3%]">
           <div className="mb-5">
             <b className=" text-[#FA8907] text-6xl font-medium ml-[125px]">
@@ -66,7 +110,10 @@ function AboutPage() {
         <div className="h-[693px] w-[820px] ">
           <img src={about2} className="h-[600px] w-[950px]" alt="" />
         </div>
-      </div>
+      </div> */}
+
+
+
 
       {/* deepam code */}
       <h3 class="text-orange-500 font-bold text-6xl flex justify-center">
