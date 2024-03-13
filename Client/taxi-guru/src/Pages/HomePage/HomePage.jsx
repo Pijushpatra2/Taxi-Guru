@@ -3,7 +3,7 @@ import Cards from "./components/Cards";
 import home_taxi from "/images/home/home_taxi.png";
 import CountUpComponent from "./components/CountUpComponent";
 import { Button } from "@mui/material";
-import Footer1 from "../../Common/components/Footer1";
+import Footer from "../../Common/components/Footer";
 import home1 from "/images/home/home_1.jpeg";
 export default function HomePage() {
   const [activeTab, setActiveTab] = useState("tab1");
@@ -15,7 +15,7 @@ export default function HomePage() {
       <div>
         <div
         
-          className={`bg-cover bg-center h-screen  bg-no-repeat bg-[url('${home1}')] flex justify-center items-center`}
+          className={`bg-cover bg-center h-screen  bg-no-repeat bg-[url('/images/home/home_1.jpeg')] flex justify-center items-center`}
         >
           
           <div className="font-extrabold lg:text-8xl md:text-6xl text-5xl text-white  text-center">
@@ -190,7 +190,7 @@ export default function HomePage() {
 
         {/* footer */}
 
-        <Footer1 />
+        <Footer />
       </div>
     </div>
   );

@@ -1,12 +1,10 @@
-import React from "react";
 import about1 from "/images/about us/about1.png";
 import about2 from "/images/about us/about2.png";
 import gallery from "/images/about us/gallery.png";
 import section from "/images/about us/section.png";
 import action1 from "/images/about us/action 1.png";
-import Footer1 from "../../Common/components/Footer1";
+import Footer from "../../Common/components/Footer";
 
-import car from "/images/home/home_1.jpeg";
 
 function AboutPage() {
   return (
@@ -116,32 +114,32 @@ function AboutPage() {
 
 
       {/* deepam code */}
-      <h3 class="text-orange-500 font-bold text-6xl flex justify-center">
+      <h3 className="text-orange-500 font-bold text-6xl flex justify-center">
         Why Choose Us?
       </h3>
-      <div class="flex justify-center mt-14 ml-2">
-        <img src={gallery} alt="Why to choose" width="100%" margin-left="2px" />
+      <div className="flex justify-center mt-14 ml-2">
+        <img src={gallery} alt="Why to choose" width="100%" className="ml-1" />
       </div>
-      <div class="flex mt-14 ml-4 justify-evenly font-medium ">
+      <div className="flex mt-14 ml-4 justify-evenly font-medium ">
         <div>
-          <p class="text-3xl ml-28 ">Safety Assurance</p>
-          <p class="mt-8 text-2xl text-center ml-3 pr-10">
+          <p className="text-3xl ml-28 ">Safety Assurance</p>
+          <p className="mt-8 text-2xl text-center ml-3 pr-10">
             For us, your security is our first concern. Our fleet goes through
             customary support, and our expert drivers, dependent upon thorough
-            historical verifications, focus on your prosperity. 
+            historical verifications, focus on your prosperity.
           </p>
         </div>
         <div>
-          <p class="text-3xl ml-32 pl-6 ">Reliable Service</p>
-          <p class="mt-8 text-2xl text-center ml-9  pl-4 ">
+          <p className="text-3xl ml-32 pl-6 ">Reliable Service</p>
+          <p className="mt-8 text-2xl text-center ml-9  pl-4 ">
             Rely on “the taxi guru” for reliable and trustworthy transportation.
             Our obligation to provoke administration guarantees you arrive at
             your objective on time, without fail.
           </p>
         </div>
-        <div class="">
-          <p class="text-3xl ml-52 pl-8 ">Affordability</p>
-          <p class="mt-8 text-2xl text-center  ml-20 pr-7">
+        <div className="">
+          <p className="text-3xl ml-52 pl-8 ">Affordability</p>
+          <p className="mt-8 text-2xl text-center  ml-20 pr-7">
             We have confidence in conveying quality transportation at open
             rates. Our obligation to moderateness guarantees you partake in an
             agreeable and solid excursion without settling for less on help
@@ -149,29 +147,29 @@ function AboutPage() {
           </p>
         </div>
       </div>
-      <div class="mt-32">
+      <div className="mt-32">
         <img src={section} alt="section" width="100%" height="23px" />
       </div>
       <div>
-        <h2 class="text-orange-500 font-bold text-6xl flex justify-center mt-28">
+        <h2 className="text-orange-500 font-bold text-6xl flex justify-center mt-28">
           How To Book?
         </h2>
-        <p class="text-center mt-14 text-2xl px-7 tracking-wide">
-           Booking a ride with “the taxi guru” is fast and hassle-free. Choose
-          the method that suits you best – use our easy to user-friendly app for
+        <p className="text-center mt-14 text-2xl px-7 tracking-wide">
+          Booking a ride with “the taxi guru” is fast and hassle-free. Choose
+          the method that suits you best - use our easy to user-friendly app for
           consistent online appointments, visit our site to reserve a spot, or
           essentially call us. Our devoted client support group is prepared to
           help you. Partake in the accommodation of efficient booking, and trust
           us to give a reliable and agreeable excursion custom-made to your
           inclinations. Any place you’re going, “the taxi guru” is here to make
-          your movement experience smooth and peaceful. 
+          your movement experience smooth and peaceful.
         </p>
       </div>
-      <div class=" mt-24">
+      <div className=" mt-24">
         <img src={action1} alt="action1" width="100%" height="23px" />
       </div>
-      <div class="mt-48">
-        <Footer1></Footer1>
+      <div className="mt-48">
+        <Footer></Footer>
       </div>
     </div>
   );

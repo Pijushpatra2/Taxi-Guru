@@ -1,15 +1,13 @@
-import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import home_taxi from "/images/home/home_taxi.png";
-import about1 from "/images/about us/about1.png";
-import about2 from "/images/about us/about2.png";
 import { EffectCoverflow, Pagination } from 'swiper/modules';
 import './slider.css';
+import ServiceData from '../data/ServiceData';
 export default function Slider() {
+  const images = ServiceData['slider']['slider_images'];
   return (
     <div className="container w-[50%]">
       <Swiper
@@ -29,28 +27,12 @@ export default function Slider() {
         modules={[EffectCoverflow, Pagination]}
         className="swiper_container"
       >
-        <SwiperSlide>
-          <img src={about1} alt="slide_image" />
+        {images.map((image, index) => (
+        <SwiperSlide key={index}>
+          <img src={image} alt={`slide_${index}`} />
         </SwiperSlide>
-        <SwiperSlide>
-          <img src={about2} alt="slide_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={about1} alt="slide_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={about2} alt="slide_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={about1} alt="slide_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={about2} alt="slide_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={about1} alt="slide_image" />
-        </SwiperSlide>
-
+      ))}
+       
         <div className="slider-controller">
         
           <div className="swiper-pagination"></div>

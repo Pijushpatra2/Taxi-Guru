@@ -1,9 +1,10 @@
-import React from "react";
-import Bg from "/images/services/bg.png";
 import Slider from "./Slider";
 import { HiPhone } from "react-icons/hi";
-
+import ServiceData from "../data/ServiceData";
+import home_taxi from "/images/home/home_taxi.png";
+import CountUpComponent from "../../HomePage/components/CountUpComponent";
 export default function ServiceComponent(props) {
+  const data = ServiceData[props.id];
   return (
     <div>
       <section>
@@ -12,25 +13,25 @@ export default function ServiceComponent(props) {
         >
           <div className="text-center  w-[60%] mx-auto">
             <p className="text-white font-extrabold text-[64px]">
-              Chandigarh to Delhi taxi Services
+              {data['div1']['text1']}
             </p>
           </div>
           <div className="text-center  mt-[100px]">
             <p className="text-[32px] font-extrabold text-white">
-              Book your taxi chadigarh to delhi at lowest price
+            {data['div1']['text2']}
             </p>
             <p className="text-[32px] font-extrabold text-white">
-              -No extra charges-
+            {data['div1']['text3']}
             </p>
           </div>
         </div>
       </section>
       <section>
-        <div className= "h-[46.875rem]">
-
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224345.89797153295!2d77.04417330746466!3d28.527554408468337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x52c2b7494e204dce!2sNew%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1710326830618!5m2!1sen!2sin"  height="751" className="border:0; w-[100%]" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div className= "">
+{/* map here */}
+        <img src={data['div2']['imgPath']} alt=""  className="w-screen bg-no-repeat object-cover"/>
         </div>
-        {/* map here */}
+        
 
 
 
@@ -39,40 +40,26 @@ export default function ServiceComponent(props) {
         <div className="bg-[url('/images/services/bg.png')] p-8 bg-center bg-cover">
           <div>
             <p className=" text-white text-fa-bold text-[40px] text-center">
-              Know about our services--
+            {data['div3']['text1']}
+
             </p>
-            <p className="text-white text-[32px] mt-8">
-              The one-way distance from Chandigarh to Delhi is approximately 252
-              kilometers, with an estimated duration of around 3.53 hours.
+            <p className="text-white text-[32px] mt-8 text-center">
+            {data['div3']['text2']}
+             
             </p>
             <p className="text-[20px] text-white mt-8">
-              Chandigarh to Delhi taxi services are readily available
-              year-round, ensuring a convenient and comfortable travel
-              experience. THETAXIGURU offers a wide selection of cabs equipped
-              with various amenities to cater to your preferences. When booking
-              a taxi online, you’ll have access to all available options,
-              allowing you to select the car model that best suits your budget
-              and travel requirements. Choose from popular models such as Etios
-              DZire, Xcent, Ertiga, Innova, Crysta, and more, available in both
-              4-seater and 6-seater configurations.
+            {data['div3']['text3']}
+
             </p>
 
             <p className="text-white text-[20px] mt-8">
-              Our drivers are not only well-trained but also courteous, ensuring
-              that your journey is both safe and enjoyable. Detailed information
-              about the cab and driver is provided 30 minutes prior to the
-              scheduled pickup time, giving you peace of mind throughout your
-              travel.
+            {data['div3']['text4']}
+
             </p>
 
             <p className="text-white text-[20px] mt-8">
-              With THETAXIGURU , you can now easily book Chandigarh to Delhi
-              taxi services at the best prices. Our 24/7 outstation cab services
-              ensure that your travel needs are met anytime, anywhere.
-              Experience a hassle-free journey with THETAXIGURU and let us take
-              care of your every need. To book round trip or one-way services
-              for Chandigarh to Delhi or any other destination in India, simply
-              visit thetaxiguru.com or call us today.
+            {data['div3']['text5']}
+             
             </p>
           </div>
           <div className=" flex justify-center mt-4">
@@ -83,7 +70,55 @@ export default function ServiceComponent(props) {
           </div>
         </div>
       </section>
-      <div className="h-[550px]">{/* <Slider></Slider> */}</div>
+      <div className="h-[550px]"><Slider></Slider></div>
+
+<section>
+<div className=" bg-black py-16 flex justify-center items-center ">
+          <div className=" justify-center items-center">
+            <div className="flex"></div>
+            <div className="text-center">
+              <p className="text-white font-bold text-3xl">THETAXIGURU</p>
+            </div>
+            <div className="flex justify-center items-center">
+              <div className="bg-white h-0.5  text-center">
+                <div className="w-12 mx-4 "></div>
+              </div>
+              <img src={home_taxi} alt="" className="h-8" />
+              <div className="bg-white h-0.5  text-center">
+                <div className="w-12 mx-4 "></div>
+              </div>
+            </div>
+            <p className="text-white text-xl text-center">
+              Counting on us for your travels – precision, reliability, and
+              comfort at every turn with us
+            </p>
+
+            <div className="md:flex mt-8 md:flex-wrap justify-center items-center flex flex-wrap border-2">
+              <CountUpComponent
+                image={home_taxi}
+           
+                title="CLIENTS"
+              ></CountUpComponent>
+              <CountUpComponent
+                image={home_taxi}
+            
+                title="TRIPS DAILY"
+              ></CountUpComponent>
+              <CountUpComponent
+                image={home_taxi}
+            
+                title="KILOMETERS"
+              ></CountUpComponent>
+              <CountUpComponent
+                image={home_taxi}
+              
+                title="CARS"
+              ></CountUpComponent>
+            </div>
+          </div>
+        </div>
+</section>
+
       {/* footer */}
       <div className="justify-between">
           <div className=" flex  justify-between items-center bg-primary p-6   font-bold text-4xl relative opacity-90">

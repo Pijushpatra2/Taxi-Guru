@@ -1,4 +1,4 @@
-import React from "react";
+
 import CountUp from "react-countup";
 export default function CountUpComponent(props) {
   return (
@@ -16,7 +16,7 @@ export default function CountUpComponent(props) {
           <CountUp
             start={0}
             end={props.end}
-            enableScrollSpy={true}
+              enableScrollSpy={true}
             className="font-bold text-5xl text-white"
             suffix="+"
           ></CountUp>
