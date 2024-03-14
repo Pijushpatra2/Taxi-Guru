@@ -33,6 +33,18 @@ const ServiceData = {
       imgPath: "/images/services/hatchback.png",
     },
   },
+  diamonds: {
+    t1: "expirenced drivers",
+    img1: "/images/services/suv.png",
+    t2: "24 X 7 fast Booking",
+    img2: "/images/services/suv.png",
+
+    t3: "No extra charges",
+    img3: "/images/services/suv.png",
+
+    t4: "Local Knowledge",
+    img4: "/images/services/suv.png",
+  },
   C2D: {
     div1: {
       text1: "CHANDIGARH TO DELHI TAXI SERVICES",

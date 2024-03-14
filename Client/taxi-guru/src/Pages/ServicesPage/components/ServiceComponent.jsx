@@ -2,9 +2,12 @@ import Slider from "./Slider";
 import { HiPhone } from "react-icons/hi";
 import ServiceData from "../data/ServiceData";
 import home_taxi from "/images/home/home_taxi.png";
-import CountUpComponent from "../../HomePage/components/CountUpComponent";
+// import CountUpComponent from "../../HomePage/components/CountUpComponent";
+import DiamondComponent from "./DiamondComponent";
 export default function ServiceComponent(props) {
   const data = ServiceData[props.id];
+
+
   return (
     <div>
       <section>
@@ -72,16 +75,16 @@ export default function ServiceComponent(props) {
       </section>
       <div className="h-[550px]"><Slider></Slider></div>
 
-<section>
-<div className=" bg-black py-16 flex justify-center items-center ">
+<section className=" border-green-700">
+<div className=" bg-black  flex justify-center items-center ">
           <div className=" justify-center items-center">
             <div className="flex"></div>
             <div className="text-center">
-              <p className="text-white font-bold text-3xl">THETAXIGURU</p>
+              <p className="text-white font-bold text-3xl">Why Book with Us?</p>
             </div>
-            <div className="flex justify-center items-center">
-              <div className="bg-white h-0.5  text-center">
-                <div className="w-12 mx-4 "></div>
+            <div className="flex justify-center items-center  mt-2">
+              <div className="bg-white h-0.5  text-center ">
+                <div className="w-12 mx-4 text-white"></div>
               </div>
               <img src={home_taxi} alt="" className="h-8" />
               <div className="bg-white h-0.5  text-center">
@@ -89,31 +92,31 @@ export default function ServiceComponent(props) {
               </div>
             </div>
             <p className="text-white text-xl text-center">
-              Counting on us for your travels – precision, reliability, and
-              comfort at every turn with us
+             
             </p>
 
-            <div className="md:flex mt-8 md:flex-wrap justify-center items-center flex flex-wrap border-2">
-              <CountUpComponent
-                image={home_taxi}
+            <div className="md:flex mt-8  justify-center items-center  ">
+    
+            <DiamondComponent
+                image={ServiceData.diamonds.img1}
            
-                title="CLIENTS"
-              ></CountUpComponent>
-              <CountUpComponent
-                image={home_taxi}
+                title={ServiceData.diamonds.t1}
+              ></DiamondComponent>
+              <DiamondComponent
+                image={ServiceData.diamonds.img2}
             
-                title="TRIPS DAILY"
-              ></CountUpComponent>
-              <CountUpComponent
-                image={home_taxi}
+                title={ServiceData.diamonds.t2}
+              ></DiamondComponent>
+              <DiamondComponent
+                image={ServiceData.diamonds.img3}
             
-                title="KILOMETERS"
-              ></CountUpComponent>
-              <CountUpComponent
-                image={home_taxi}
+                title={ServiceData.diamonds.t3}
+              ></DiamondComponent>
+              <DiamondComponent
+                image={ServiceData.diamonds.img4}
               
-                title="CARS"
-              ></CountUpComponent>
+                title={ServiceData.diamonds.t4}
+              ></DiamondComponent>
             </div>
           </div>
         </div>
