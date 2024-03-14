@@ -8,7 +8,8 @@ export default function ContactPage() {
       <h2 class="text-7xl font-sans font-bold flex justify-center mt-8">Contact Us</h2>
       <p class="text-4xl text-gray-500 flex justify-center font-semibold mt-5 tracking-wider">Any question or remarks?  &nbsp;Just write us a message!</p>
      </div>
-      <div class="flex">
+    
+      <div class="flex gap-8">
         <div class="  bg-[#FA8907] h-[625px] w-[510px] rounded-xl ml-14 pt-7 mt-16 shadow-3xl">
           <h4 class="text-3xl font-semibold tracking-wider pl-8 text-white">Contact Information</h4>
           <p className="mt-4 text-lg pl-8 font-extralight tracking-widest text-white ">Say something to start a live chat!</p>
@@ -61,10 +62,56 @@ export default function ContactPage() {
   <img src={Ellipse2} alt="" class="absolute top-[762px] left-[355px] shadow-3xl"/>
   </div>
         </div>
-        <div className='border-2 border-black h-3 w-2'>
-        <form></form>
+        <div className=' h-[52rem] w-[56rem] mt-[101px]'>
+        <form className='text-gray-500'>
+          <div className='flex gap-32  ml-[80px]'>
+          <div>
+            <div className='mb-4 text-lg'><label htmlFor="First Name">First Name</label></div>
+            <div><input type="text" className='border-b-2 w-[325px] border-gray- h-12 outline-none text-base' /></div>
+          </div>
+          <div>
+          <div className='mb-4 text-lg'><label htmlFor="First Name">Last Name</label></div>
+            <div><input type="text" className='border-b-2 w-[325px] border-gray- h-12 outline-none text-base' /></div>
+          </div>
+         </div>
+          <div className='flex gap-32  ml-[90px] mt-16'>
+          <div>
+            <div className='mb-4 text-lg'><label htmlFor="Email">Email</label></div>
+            <div><input type="text" className='border-b-2 w-[325px] border-gray- h-12 outline-none text-base' /></div>
+          </div>
+          <div>
+          <div className='mb-4 text-lg'><label htmlFor="Phone Number">Phone Number</label></div>
+            <div><input type="text" className='border-b-2 w-[325px] border-gray- h-12 outline-none text-base' /></div>
+          </div>
+         </div>
+          <div className='flex  ml-[90px] mt-16'>
+          <div>
+            <div className='mb-4 text-lg'><label htmlFor="Email">Journey Type</label></div>
+            <div><input type="text" className='border-b-2 w-[765px] border-gray- h-12 outline-none text-base' /></div>
+          </div>
+          
+         </div>
+          <div className='flex  ml-[95px] mt-16'>
+          <div>
+            <div className='mb-4 text-lg'><label htmlFor="Email">Pick and Drop Address *</label></div>
+            <div><input type="text" className='border-b-2 w-[765px] border-gray- h-12 outline-none text-base' /></div>
+          </div>
+          
+         </div>
+         
+         <div className='  ml-[633px] mt-16'>
+         <button className='bg-[#FA8907] text-white h-[56px] w-[195px] rounded-md text-lg shadow-lg'>Send Message</button>
+         </div>
+        </form>
   
         </div>
+        </div>
+        <div>
+           <h2 className='text-center text-4xl font-extrabold'>24/7 available for customer support</h2>
+           <p className='text-center text-xl font-medium tracking-wider mt-5'>At “The Taxi Guru”, we understand that travel plans can change at any time. That’s why our customer support <br />team is available 24/7 to assist you.</p>
+        </div>
+        <div className='mt-10'>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30765493.77262258!2d61.02101754100091!3d19.731627470788023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e0!3m2!1sen!2sin!4v1710414959120!5m2!1sen!2sin"  className='border-0 w-full h-[600px]' allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
      
