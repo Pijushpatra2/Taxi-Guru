@@ -13,11 +13,9 @@ export default function HomePage() {
   return (
     <div>
       <div>
-        <div
-        
-          className={`bg-cover bg-center h-screen  bg-no-repeat bg-[url('/images/home/home_1.jpeg')] flex justify-center items-center`}
+        <div  
+          className={`bg-cover bg-center md:h-screen  h-[35vh]   bg-no-repeat bg-[url('/images/home/home_1.jpeg')] flex justify-center items-center`}
         >
-          
           <div className="font-extrabold lg:text-8xl md:text-6xl text-5xl text-white  text-center">
             &ldquo;Let&apos;s roll! Book your taxi!&rdquo;
           </div>
@@ -59,14 +57,14 @@ export default function HomePage() {
         </div>
 
         <div className="items-center text-center ">
-          <div className=" flex   justify-center my-8 ">
+          <div className=" flex justify-center my-8 ">
             <img src={home_taxi} alt="" className="h-36" />
           </div>
-          <p className="text-4xl font-bold text-shadow-lg  py-4">
+          <p className="md:text-4xl text-2xl font-bold text-shadow-lg  py-4">
             {" "}
             BOOK YOUR CARS WE SERVE
           </p>
-          <p className="text-3xl text-wrap text-shadow-lg ">
+          <p className="md:text-3xl text-xl px-1 text-wrap text-shadow-lg ">
             Ready to hit the road? At the taxi guru, your journey begins with a
             simple click.
           </p>
@@ -95,12 +93,12 @@ export default function HomePage() {
             <img src={home_taxi} alt="" className="h-12" />
           </div>
           <div className="flex justify-center items-center ">
-            <p className="text-primary text-2xl	 ">WHAT WE OFFER </p>
+            <p className="text-primary  text-xl md:text-2xl	 ">WHAT WE OFFER </p>
           </div>
           <div className="flex justify-center items-center">
-            <p className="font-black text-white text-6xl">OUR SERVICES</p>
+            <p className="font-black text-white text-4xl md:text-6xl">OUR SERVICES</p>
           </div>
-          <p className="text-white text-4xl text-center">
+          <p className="text-white text-2xl md:text-4xl text-center">
             Book Your Ride in Only a Couple of clicks!
           </p>
           <div className="lg:flex items-center justify-center  mt-4  gap-16">
@@ -129,7 +127,7 @@ export default function HomePage() {
         </div>
 
         <div className="items-center text-center py-10 mb-8 ">
-          <p className="text-4xl font-bold text-shadow-lg "> MEET THE FLEET</p>
+          <p className="md:text-4xl text-2xl font-bold text-shadow-lg "> MEET THE FLEET</p>
           <div className=" flex   justify-center my-8 items-center">
             <div className="bg-black h-0.5  text-center">
               <div className="w-12 mx-4 "></div>
@@ -139,7 +137,7 @@ export default function HomePage() {
               <div className="w-12  mx-4 "></div>
             </div>
           </div>
-          <p className="text-3xl text-wrap text-shadow-lg ">
+          <p className="md:text-3xl  text-xl text-wrap text-shadow-lg ">
             Meet the Fleet, Your Ticket to Tailored Travels – the taxi guru,
             Where Every Ride is a Signature Experience..
           </p>
@@ -159,15 +157,16 @@ export default function HomePage() {
                 <div className="w-12 mx-4 "></div>
               </div>
             </div>
-            <p className="text-white text-xl text-center">
+            <p className="text-white text-xl text-center px-2">
               Counting on us for your travels – precision, reliability, and
               comfort at every turn with us
             </p>
 
-            <div className="md:flex mt-8 md:flex-wrap justify-center items-center flex flex-wrap ">
+            <div className=" mt-8 justify-center items-center flex flex-wrap ">
               <CountUpComponent
                 image={home_taxi}
                 end={100}
+                
                 title="CLIENTS"
               ></CountUpComponent>
               <CountUpComponent

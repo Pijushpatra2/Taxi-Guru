@@ -1,5 +1,3 @@
-
-
 export default function DiamondComponent(props) {
   return (
     <div className="flex-col justify-center m-8 ">
@@ -12,8 +10,7 @@ export default function DiamondComponent(props) {
         </div>
       </div>
       <div className="mx-4  mt-8">
-    
-        <div className="uppercase text-3xl font-bold  mt-4 text-white text-center text-[32px]">
+        <div className="uppercase text-3xl font-bold  mt-4 text-white text-center text-[25px] md:text-[32px]">
           {props.title}
         </div>
       </div>

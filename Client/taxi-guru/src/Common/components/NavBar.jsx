@@ -6,6 +6,7 @@ import { styles } from "../../Style";
 
 function NavBar() {
   const [toggle, setToggle] = useState(false);
+  const [showService, setshowService] = useState(false);
 
   const handleToggle = () => {
     setToggle(!toggle);
@@ -43,14 +44,44 @@ function NavBar() {
                 ABOUT US
               </NavLink>
               <NavLink
+                onMouseEnter={() => setshowService(true)}
+                onMouseLeave={() => setshowService(false)}
                 to="/services"
                 className={({ isActive }) =>
-                  `my-6 px-4 py-1 text-2xl  hover:bg-primary rounded-full mx-2 ${
+                  `my-6 px-4 py-1 text-2xl  hover:bg-primary rounded-full mx-2 relative ${
                     isActive ? "bg-primary" : ""
                   }`
                 }
               >
                 SERVICES
+                {showService && (
+                  <li
+                    onMouseEnter={() => setshowService(true)}
+                    onMouseLeave={() => setshowService(false)}
+                    className="cursor-pointer absolute top-10 -left-4 bg-white text-black  text-center "
+                  >
+                    <div className="block  px-2 py-2  duration-300 hover:bg-black hover:text-white">
+                      <NavLink to="services/chandigarh-to-delhi">
+                        CHANDIGARH TO DELHI TAXI
+                      </NavLink>
+                    </div>
+                    <div className="block  px-2 py-2  duration-300 hover:bg-black hover:text-white">
+                      <NavLink to="services/chandigarh-to-haryana">
+                        CHANDIGARH TO HARYANA TAXI
+                      </NavLink>
+                    </div>
+                    <div className="block  px-2 py-2  duration-300 hover:bg-black hover:text-white">
+                      <NavLink to="services/chandigarh-to-punjab">
+                        CHANDIGARH TO PUNJAB TAXI
+                      </NavLink>
+                    </div>
+                    <div className="block  px-2 py-2  duration-300 hover:bg-black hover:text-white">
+                      <NavLink to="services/chandigarh-to-himachal">
+                        CHANDIGARH TO HIMACHAL TAXI
+                      </NavLink>
+                    </div>
+                  </li>
+                )}
               </NavLink>
               <NavLink
                 to="/contact-us"

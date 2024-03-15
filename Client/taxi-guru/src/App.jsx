@@ -20,11 +20,10 @@ function App() {
           <Route path="/services">
             <Route index={true} element={<Services />} />
 
-            <Route path="C2D" element={<ServiceC2D />} />
-            <Route path="C2H" element={<ServiceC2H />} />
-            <Route path="C2P" element={<ServiceC2P />} />
-            <Route path="C2HP" element={<ServiceC2HP />} />
- 
+            <Route path="chandigarh-to-delhi" element={<ServiceC2D />} />
+            <Route path="chandigarh-to-haryana" element={<ServiceC2H />} />
+            <Route path="chandigarh-to-punjab" element={<ServiceC2P />} />
+            <Route path="chandigarh-to-himachal" element={<ServiceC2HP />} />
           </Route>
           <Route path="/about-us" element={<AboutPage />} />
           <Route path="/contact-us" element={<ContactPage />} />
