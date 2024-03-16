@@ -2,7 +2,7 @@ import about1 from "/images/about us/about1.png";
 import about2 from "/images/about us/about2.png";
 import gallery from "/images/about us/gallery.png";
 import section from "/images/about us/section.png";
-import action1 from "/images/about us/action 1.png";
+ import action1 from "/images/about us/1800 1.png";
 import Footer from "../../Common/components/Footer";
 
 
@@ -113,7 +113,7 @@ function AboutPage() {
 
 
 
-      {/* deepam code */}
+      {/* Deepam code */}
       <h3 className="text-orange-500 font-bold text-6xl flex justify-center">
         Why Choose Us?
       </h3>
@@ -165,8 +165,8 @@ function AboutPage() {
           your movement experience smooth and peaceful.
         </p>
       </div>
-      <div className=" mt-24">
-        <img src={action1} alt="action1" width="100%" height="23px" />
+      <div  className={`bg-cover md:h-screen  h-[35vh] w-[100%] bg-[url('/images/about us/1800 1.png')]`} >
+        
       </div>
       <div className="mt-48">
         <Footer></Footer>
@@ -174,5 +174,5 @@ function AboutPage() {
     </div>
   );
 }
-
-export default AboutPage;
+                                                                                                                  
+export default AboutPage;          
