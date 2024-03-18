@@ -3,17 +3,20 @@ import ServiceData from "./data/ServiceData";
 export default function Services() {
   const data = ServiceData["main"];
   return (
-    <div>
-      {/* background pic */}
-      <img
+    <div className=" ">
+      
+<div className="relative">
+<div className="border-2 absolute z-[-1]">
+<img
         src={data["div1"]["imgPath"]}
         className=" w-[100%] bg-cover object-cover "
-        alt="error"
+        alt="error" 
       />
-      {/* 1st conatiner */}
-      <div className="md:mt-[-150px] mt-[-50px] flex justify-center items-center px-6">
-        <div className="h-[900px] md:h-[550px] border-2 border-black bg-white shadow-lg rounded-[30px] md:flex flex-row">
-          <div className="flex justify-centerh-[35%] w-[100%] px-5 py-5 md:h-[100%] md:flex md:w-[150%]">
+</div>
+      
+      <div className="border-2 border-green-700   flex justify-center items-center px-6 relative top-[120px]">
+        <div className="  border-2 border-black bg-white shadow-lg rounded-[30px] md:flex flex-row">
+          <div className="flex justify-centerh-[35%] w-[100%] px-5 py-5 md:h-[100%] md:flex ">
             <img
               src={data["div2"]["imgPath"]}
               className="text-center h-[273px] w-[360px] object-cover md:h-[100%] md:w-screen md:bg-contain"
@@ -39,9 +42,10 @@ export default function Services() {
           </div>
         </div>
       </div>
+</div>
 
       {/* 2st conatiner */}
-      <div className="flex justify-center items-center px-6 mt-16">
+      <div className="flex justify-center items-center px-6 mt-16 ">
         <div className="flex flex-col-reverse justify-end h-[900px] md:h-[550px] border-2 border-black bg-white shadow-lg rounded-[30px] md:flex md:flex-row">
           <div className="w[141%] md:item-end md:w-[150%]">
             <div className="">
