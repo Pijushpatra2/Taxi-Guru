@@ -10,19 +10,20 @@ export default function ServiceComponent(props) {
   return (
     <div>
       <section>
+      {/* pt-8 pb-[100px] */}
         <div
-          className={`bg-[url('/images/services/bg.png')] bg-center bg-no-repeat bg-cover pt-8 pb-[100px] `}
+          className={`bg-[url('/images/services/bg.png')] bg-center bg-no-repeat bg-cover  xs:min-h-[250px] flex flex-col justify-center items-center md:min-h-[500px]`}
         >
-          <div className="text-center  w-[90%] mx-auto md:[60%]">
-            <p className="text-white font-extrabold text-[32px]">
+          <div className="text-center mt-4  mx-auto md:[60%]  md:mt-0">
+            <p className="text-white font-extrabold md:text-[32px] xs:text-[20px] ">
               {data["div1"]["text1"]}
             </p>
           </div>
-          <div className="text-center  mt-[40px]">
-            <p className="text-[32px] font-extrabold text-white">
+          <div className="text-center  w-[70%] mx-auto  space-y-3  mt-8  lg:w-[37%]">
+            <p className="md:text-[32px] font-extrabold text-white xs:text-[18px]">
               {data["div1"]["text2"]}
             </p>
-            <p className="text-[24px] font-extrabold text-white md:text-[32px]">
+            <p className=" font-extrabold text-white md:text-[32px] ">
               {data["div1"]["text3"]}
             </p>
           </div>
@@ -39,30 +40,34 @@ export default function ServiceComponent(props) {
         </div>
       </section>
       <section>
-        <div className="bg-[url('/images/services/bg.png')] p-8 bg-center bg-cover bg-no-repeat">
-          <div>
-            <p className=" text-white text-fa-bold text-[35px] text-center md:text-[40px]">
+        <div className="bg-[url('/images/services/bg.png')] p-8 bg-center bg-cover bg-no-repeat ">
+          <div className="">
+        <div>
+        <p className=" text-white text-fa-bold text-[25px] text-center md:text-[40px]">
               {data["div3"]["text1"]}
             </p>
-            <p className="text-white text-[32px] mt-8 text-center">
+        </div>
+          <div className=" text-center leading-tight">
+          <p className="text-white md:text-[32px] mt-8 xs:text-[20px]  ">
               {data["div3"]["text2"]}
             </p>
-            <p className="text-[20px] text-white mt-8 text-center">
+          </div>
+            <p className="md:text-[20px] text-white mt-8 text-center xs:text-[16px]">
               {data["div3"]["text3"]}
             </p>
 
-            <p className="text-white text-[20px] mt-8 text-center">
+            <p className="text-white md:text-[20px] mt-8 text-center xs:text-[16px]">
               {data["div3"]["text4"]}
             </p>
 
-            <p className="text-white text-[20px] mt-8 text-center">
+            <p className="text-white md:text-[20px] mt-8 text-center xs:text-[16px]">
               {data["div3"]["text5"]}
             </p>
           </div>
           <div className=" flex justify-center mt-4">
-            <div className="bg-[#fa8907]  flex justify-center p-2 gap-2 rounded-full">
-              <HiPhone size={35} />
-              <p className=" text-[24px] font-bold">contact Us</p>
+            <div className="bg-[rgb(250,137,7)]  flex justify-center p-3 gap-2 rounded-full  ">
+              <HiPhone size={30} />
+              <p className=" text-[24px] font-bold">Contact Us</p>
             </div>
           </div>
         </div>
@@ -71,11 +76,11 @@ export default function ServiceComponent(props) {
         <Slider></Slider>
       </div>
 
-      <section className=" border-green-700">
-        <div className=" bg-black  flex justify-center items-center ">
+      <section className=" ">
+        <div className=" bg-black  flex justify-center items-center p-2">
           <div className=" justify-center items-center">
             <div className="flex"></div>
-            <div className="text-center">
+            <div className="text-center ">
               <p className="text-white font-bold text-[35px] md:text-3xl">
                 Why Book with Us?
               </p>
@@ -116,7 +121,7 @@ export default function ServiceComponent(props) {
       {/* footer */}
       <div className="justify-between">
         <div className=" flex  justify-between items-center bg-primary p-6   font-bold text-4xl relative opacity-90">
-          <div className="h-20 font-black py-4">Need Taxi ?</div>
+          <div className="h-20 font-black py-4 text-[25px] text-nowrap  ">Need Taxi ?</div>
 
           <button className="bg-black uppercase text-white rounded-sm px-6 font-bold text-sm  py-2">
             Contact

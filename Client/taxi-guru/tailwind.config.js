@@ -4,7 +4,15 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      
+      wordSpacing: {
+        '2': '0.5rem',
+        '4': '1rem',
+        '6': '1.5rem',
+        // Add more custom spacing values as needed
+    },
+      screens:{
+          xs:'300px'
+      },
       textShadow: {
         sm: '0 1px 2px ',
        
