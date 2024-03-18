@@ -1,10 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import Ellipse1 from "/images/contact/Ellipse 793.png";
 import Ellipse2 from "/images/contact/Ellipse 794.png";
 import Footer from "../../Common/components/Footer";
 import Map from "/images/contact/Map.png";
 import { styles } from "../../Style";
+import axios from "axios";
 export default function ContactPage() {
+  const [formData, setFormData] = useState({});
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await axios.post('http://localhost:3000/api/createuserrequest', formData);
+      alert('Data saved successfully');
+      setFormData({});
+    } catch (err) {
+      console.error(err);
+      alert('Failed to save Data');
+    }
+  };
+
   return (
     <div className="w-[100%] m-0 lg:w-[70%] lg:mx-[15%]">
       <div className="text-center">
@@ -105,14 +128,20 @@ export default function ContactPage() {
                 <label htmlFor="First Name">First Name</label>
                 <input
                   type="text"
+                  name="firstName"
+                  value={formData.firstName || ''}
+                  onChange={handleChange}
                   className="border-b-2 border-gray- h-12 outline-none text-base w-full"
                 />
               </div>
 
               <div className="mb-4 text-lg w-[45%]">
-                <label htmlFor="First Name">Last Name</label>
+                <label htmlFor="Last Name">Last Name</label>
                 <input
                   type="text"
+                  name="lastName"
+                  value={formData.lastName || ''}
+                  onChange={handleChange}
                   className="border-b-2 border-gray- h-12 outline-none text-base w-full"
                 />
               </div>
@@ -120,17 +149,23 @@ export default function ContactPage() {
 
             <div className="flex lg:w-[100%] gap-[10%]">
               <div className="mb-4 text-lg w-[45%]">
-                <label htmlFor="First Name">Email</label>
+                <label htmlFor="email">Email</label>
                 <input
                   type="text"
+                  name="email"
+                  value={formData.email || ''}
+                  onChange={handleChange}
                   className="border-b-2 border-gray- h-12 outline-none text-base w-full"
                 />
               </div>
 
               <div className="mb-4 text-lg w-[45%]">
-                <label htmlFor="First Name">Phone no</label>
+                <label htmlFor="Phone no">Phone no</label>
                 <input
                   type="text"
+                  name="phoneNumber"
+                  value={formData.phoneNumber || ''}
+                  onChange={handleChange}
                   inputMode="numeric"
                   className="border-b-2 border-gray- h-12 outline-none text-base w-full"
                 />
@@ -138,23 +173,29 @@ export default function ContactPage() {
             </div>
 
             <div className="mb-4 text-lg w-full">
-              <label htmlFor="First Name">Journey Type</label>
+              <label htmlFor="Journey Type">Journey Type</label>
               <input
-                type="text"
+                 type="text"
+                 name="journeyType"
+                 value={formData.journeyType || ''}
+                 onChange={handleChange}
                 className="border-b-2 border-gray- h-12 outline-none text-base w-full"
               />
             </div>
 
             <div className="mb-4 text-lg w-full">
-              <label htmlFor="First Name">Pick up and Drop Address *</label>
+              <label htmlFor="Address">Pick up and Drop Address *</label>
               <input
                 type="text"
+                name="address"
+                value={formData.address || ''}
+                onChange={handleChange}
                 className="border-b-2 border-gray- h-12 outline-none text-base w-full"
               />
             </div>
 
             <div className=" mt-16">
-              <button className="bg-[#FA8907] text-white h-[56px] w-[195px] rounded-md text-lg shadow-lg">
+              <button className="bg-[#FA8907] text-white h-[56px] w-[195px] rounded-md text-lg shadow-lg" onClick={handleSubmit}>
                 Send Message
               </button>
             </div>

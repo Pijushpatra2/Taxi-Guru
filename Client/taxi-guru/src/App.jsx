@@ -10,6 +10,7 @@ import ServiceC2HP from "./Pages/ServicesPage/ServiceC2HP";
 import AboutPage from "./Pages/AboutPage/AboutPage";
 import ContactPage from "./Pages/ContactPage/ContactPage";
 import Slider from "./Pages/ServicesPage/components/Slider";
+import AdminPage from "./Pages/AdminPage/AdminPage";
 function App() {
   return (
     <>
@@ -26,7 +27,7 @@ function App() {
             <Route path="chandigarh-to-himachal" element={<ServiceC2HP />} />
           </Route>
           <Route path="/contact-us" element={<ContactPage />} />
-          <Route path="/slider" element={<Slider />} />
+          <Route path="/admin" element={<AdminPage />} />
           <Route path="/about-us" element={<AboutPage />} />
         </Routes>
       </BrowserRouter>
