@@ -1,17 +1,15 @@
-import { useState } from "react";
 import Cards from "./components/Cards";
 import home_taxi from "/images/home/home_taxi.png";
 import CountUpComponent from "./components/CountUpComponent";
 import { Button } from "@mui/material";
 import Footer from "../../Common/components/Footer";
 import home1 from "/images/home/home_1.jpeg";
+import TabBar from './components/TabBar'
 export default function HomePage() {
-  const [activeTab, setActiveTab] = useState("tab1");
-  const handleChange = (tab) => {
-    setActiveTab(tab);
-  };
+
   return (
     <div>
+
       <div>
         <div  
           className={`bg-cover bg-center md:h-screen  h-[35vh]   bg-no-repeat bg-[url('/images/home/home_1.jpeg')] flex justify-center items-center`}
@@ -22,38 +20,7 @@ export default function HomePage() {
         </div>
         {/* TAB  */}
         <div>
-          <div className="flex flex-row">
-            <Button
-              variant="contained"
-              size="small"
-              onClick={() => handleChange("tab1")}
-              className={activeTab === "tab1" ? "active" : ""}
-            >
-              Tab 1
-            </Button>
-            <Button
-              variant="contained"
-              size="small"
-              onClick={() => handleChange("tab2")}
-              className={activeTab === "tab2" ? "active" : ""}
-            >
-              Tab 2
-            </Button>
-            
-            <Button
-              variant="contained"
-              size="small"
-              onClick={() => handleChange("tab3")}
-              className={activeTab === "tab3" ? "active" : ""}
-            >
-              Tab 3
-            </Button>
-          </div>
-          <div>
-            {activeTab === "tab1" && <div>TAB 1</div>}
-            {activeTab === "tab2" && <div>TAB 2</div>}
-            {activeTab === "tab3" && <div>TAB 3</div>}
-          </div>
+          <TabBar/>
         </div>
 
         <div className="items-center text-center ">

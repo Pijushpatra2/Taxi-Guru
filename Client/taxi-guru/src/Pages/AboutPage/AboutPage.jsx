@@ -2,177 +2,215 @@ import about1 from "/images/about us/about1.png";
 import about2 from "/images/about us/about2.png";
 import gallery from "/images/about us/gallery.png";
 import section from "/images/about us/section.png";
- import action1 from "/images/about us/1800 1.png";
+import action1 from "/images/about us/1800 1.png";
 import Footer from "../../Common/components/Footer";
-
 
 function AboutPage() {
   return (
-    <div>
-      <div className="bg-gray-300 h-12 ">
-        <p className="ml-[5%] pt-1.5 text-3xl font-light">ABOUT US</p>
-      </div>
+    <>
+      <div className="h-[50rem] w-[100%]  mt-11 sm :h-[30rem] sm:flex  lg:h-[33rem] lg:text-xl  xl:h-[42rem]">
+        <div className="h-[26rem] w-[100%]  p-3 sm:h-[29.7rem]  sm:text-lg sm:w-[50%] lg:h-[32.7rem] lg:text-[25px] lg:pl-7 xl:h-[41.7rem] xl:text-4xl xl:pr-3">
+          <h1 className="h-[4rem] w-[100%]  p-5 text-[#FA8907] font-bold text-4xl lg:pl-6 lg:text-[50px]">
+            Who we are?
+          </h1>
 
-      <div className="flex flex-col md:flex-row justify-between mt-16">
-        <div className="w-full md:w-2/5 lg:w-3/10 px-4 md:px-0">
-          <div className="mb-5">
-            <b className="text-[#FA8907] text-6xl font-medium">Who we are?</b>
-          </div>
-          <p className="text-base md:text-lg lg:text-xl">
+          <p className="mt-4 drop-shadow-lg">
             At “the taxi guru”, we rethink travel in Seunk Mullanpur, New
             Chandigarh, with a promise to somewhere safe and secure, comfort,
             and reasonableness. <br />
+            <br /> Our different fleet of sedans, SUVs, and hatchbacks
+            guarantees custom-made answers for each explorer. <br />
             <br />
-            Our different fleet of sedans, SUVs, and hatchbacks guarantees
-            custom-made answers for each explorer. <br />
-            <br />
-            Book effortlessly through our easy-to-use application or a simple
+            Book effortlessly through our easy to use application or a basic
             call, and trust “the taxi guru” for a dependable, secure, and
             pleasant excursion.
           </p>
         </div>
 
-        <div className="w-full md:w-3/5 lg:w-7/10 px-4 md:px-0 mt-8 md:mt-0">
-          <img src={about1} className="w-full h-auto" alt="" />
+        <div className="h-[24rem] w-[100%]  sm:h-[29.7rem] sm:w-[50%] lg:h-[32.7rem] xl:h-[41.7rem] ">
+          <img
+            className="h-[100%] w-[100%] sm:h-[100%] "
+            src={about1}
+            alt=""
+          />
         </div>
       </div>
 
-      {/* 2nd div */}
-      <div className="flex flex-col md:flex md:flex-row-reverse justify-between mt-16 ">
-        <div className=" w-full md:w-2/5 lg:w-3/10 px-4 md:px-0">
-          <div className="mb-5">
-            <b className=" text-[#FA8907] text-6xl font-medium">
-              Our Mission
-            </b>
+      <div className="h-[60em] w-[100%] mt-3  sm:h-[35rem] sm:mt-10 sm:flex sm:flex-row-reverse lg:h-[42rem]  xl:h-[42.5rem]">
+        <div className="h-[35rem] w-[100%]  sm:text-[17px]  sm:font-normal lg:text-[22px] xl:font-normal xl:text-3xl">
+          <h1 className="h-[3rem] w-[100%] pl-7 text-[#FA8907] font-bold text-4xl sm:mt-5 sm:pl-[5rem]  lg:text-[50px] xl:pl-56">
+            Our Mission
+          </h1>
+
+          <p className="p-3 drop-shadow-lg  ">
+            “At “the taxi guru”, our mission is to give protected, dependable,
+            and advantageous transportation arrangements in Seunk Mullanpur, New
+            Chandigarh, and beyond. <br />
+            <br /> We are focused on guaranteeing the prosperity of our
+            travelers by keeping an fleet of well-equipped vehicles driven by
+            proficient and respectful drivers.
+            <br />
+            <br /> Through straightforward valuing, and a devotion to consumer
+            loyalty, we mean to reclassNameify the movement experience for
+            people and families. <br />
+            <br /> At “the taxi guru”, we don’t simply drive; we prepare for
+            consistent, charming excursions, making each ride with us a vital
+            encounter.”
+          </p>
+        </div>
+
+        <div className="h-[25.7rem] w-[100%]  sm:h-[34.7rem] lg:h-[41.7rem] xl:h-[42rem]">
+          <img
+            className="h-[100%] w-[100%]"
+            src={about2}
+            alt=""
+          />
+        </div>
+      </div>
+
+      <h1 className="h-[4rem] w-[100%] mt-7  text-center text-4xl text-[#FA8907] font-bold p-2 lg:text-[50px]">
+        Why choose us
+      </h1>
+
+      <div className="h-[65.2rem] w-[100%] sm:h-[30rem] sm:flex  lg:h-[27.5rem] xl:h-[33rem] sm:pl-2 xl:pl-0 ">
+        <div className="h-[23rem]     w-[100%] sm:flex flex-col sm:h-[26.7rem] sm:w-[15.5rem] lg:w-[21rem] xl:h-[32rem] xl:w-[30rem] 2xl:w-[53rem]">
+          <div className="h-[11rem] w-[100%]  sm:h-[11.4rem] sm:w-[15.4rem] sm:object-contain lg:w-[20.7rem] xl:h-[17rem] xl:w-[29.9rem] 2xl:w-[52.8rem]">
+            <img
+              className="h-[100%] w-[100%]"
+              src="/dist/picture/first picture.png"
+              alt=""
+            />
           </div>
-          <p className="text-base md:text-lg lg:text-xl">
-          “At “the taxi guru”, our mission is to give protected, dependable, and
-          advantageous transportation arrangements in Seunk Mullanpur, New
-          Chandigarh, and beyond.
-          <br /> <br />
-          We are focused on guaranteeing the prosperity of our travelers by
-          keeping an fleet of well-equipped vehicles driven by proficient and
-          respectful drivers.
-          <br /> <br />
-          Through straightforward valuing, and a devotion to consumer loyalty,
-          we mean to reclassify the movement experience for people and families.
-          <br /> <br />
-          At “the taxi guru”, we don’t simply drive; we prepare for consistent,
-          charming excursions, making each ride with us a vital encounter.”
-          </p>
-        </div>
 
-        <div className="w-full md:w-3/5 lg:w-7/10 px-4 md:px-0 mt-8 md:mt-0 ">
-          <img src={about2} className="w-full h-auto" alt="" />
-        </div>
-      </div>
+          <div className="">
+            <h3 className="h-[2.3rem] w-[100%]   text-xl font-normal text-center p-1 sm:pt-4  xl:text-2xl">
+              Safety Assurance
+            </h3>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      {/* <div className="h-[30%] w-[100%]  flex  flex-row-reverse justify-between mt-16 ">
-        <div className=" h-[560px] w-[50%]  font-sans text-[22px] mr-[2%] ml-[3%]">
-          <div className="mb-5">
-            <b className=" text-[#FA8907] text-6xl font-medium ml-[125px]">
-              Our Mission
-            </b>
+            <p className="text-center sm:text-xl sm:pt-4 xl:text-[26px] xl:mt-4">
+              For us, your security is our first concern. Our fleet goes through
+              customary support, and our expert drivers, dependent upon thorough
+              historical verifications, focus on your prosperity.  
+            </p>
           </div>
-          “At “the taxi guru”, our mission is to give protected, dependable, and
-          advantageous transportation arrangements in Seunk Mullanpur, New
-          Chandigarh, and beyond.
-          <br /> <br />
-          We are focused on guaranteeing the prosperity of our travelers by
-          keeping an fleet of well-equipped vehicles driven by proficient and
-          respectful drivers.
-          <br /> <br />
-          Through straightforward valuing, and a devotion to consumer loyalty,
-          we mean to reclassify the movement experience for people and families.
-          <br /> <br />
-          At “the taxi guru”, we don’t simply drive; we prepare for consistent,
-          charming excursions, making each ride with us a vital encounter.”
         </div>
 
-        <div className="h-[693px] w-[820px] ">
-          <img src={about2} className="h-[600px] w-[950px]" alt="" />
-        </div>
-      </div> */}
+        <div className="h-[21rem]   w-[100%] sm:flex flex-col sm:h-[26.7rem] sm:ml-2 sm:w-[15.5rem]  lg:w-[21rem] xl:h-[32rem] xl:w-[30rem]  2xl:w-[53rem]">
+          <div className="h-[11rem]  w-[100%] sm:h-[11.4rem] sm:w-[15.4rem] sm:object-contain lg:w-[20.9rem] xl:h-[17rem] xl:w-[29.9rem] 2xl:w-[52.8rem]">
+            <img
+              className="h-[100%] w-[100%]"
+              src="/dist/picture/first picture.png"
+              alt=""
+            />
+          </div>
 
+          <div>
+            <h3 className="h-[2.3rem] w-[100%]   text-xl font-normal text-center p-1 sm:pt-4  xl:text-2xl ">
+              Reliable Service
+            </h3>
 
+            <p className="text-center sm:text-xl sm:pt-4 xl:text-[26px]  xl:mt-4">
+              Rely on “the taxi guru” for reliable and trustworthy
+              transportation. Our obligation to provoke administration
+              guarantees you arrive at your objective on time, without fail.
+            </p>
+          </div>
+        </div>
 
+        <div className="h-[22rem]  w-[100%] sm:flex flex-col sm:h-[29.7rem] sm:ml-2 sm:w-[15.5rem] lg:h-[27rem] lg:w-[21rem] xl:h-[32rem] xl:w-[30rem]  2xl:w-[53rem]">
+          <div className="h-[11rem]  w-[100%] sm:h-[11.2rem] sm:w-[15.4rem] sm:object-contain lg:w-[20.9rem] xl:h-[17rem] xl:w-[29.2rem] 2xl:w-[52.8rem]">
+            <img
+              className="h-[100%] w-[100%]"
+              src="/dist/picture/first picture.png"
+              alt=""
+            />
+          </div>
 
-      {/* Deepam code */}
-      <h3 className="text-orange-500 font-bold text-6xl flex justify-center">
-        Why Choose Us?
-      </h3>
-      <div className="flex justify-center mt-14 ml-2">
-        <img src={gallery} alt="Why to choose" width="100%" className="ml-1" />
-      </div>
-      <div className="flex mt-14 ml-4 justify-evenly font-medium ">
-        <div>
-          <p className="text-3xl ml-28 ">Safety Assurance</p>
-          <p className="mt-8 text-2xl text-center ml-3 pr-10">
-            For us, your security is our first concern. Our fleet goes through
-            customary support, and our expert drivers, dependent upon thorough
-            historical verifications, focus on your prosperity.
-          </p>
-        </div>
-        <div>
-          <p className="text-3xl ml-32 pl-6 ">Reliable Service</p>
-          <p className="mt-8 text-2xl text-center ml-9  pl-4 ">
-            Rely on “the taxi guru” for reliable and trustworthy transportation.
-            Our obligation to provoke administration guarantees you arrive at
-            your objective on time, without fail.
-          </p>
-        </div>
-        <div className="">
-          <p className="text-3xl ml-52 pl-8 ">Affordability</p>
-          <p className="mt-8 text-2xl text-center  ml-20 pr-7">
-            We have confidence in conveying quality transportation at open
-            rates. Our obligation to moderateness guarantees you partake in an
-            agreeable and solid excursion without settling for less on help
-            greatness.
-          </p>
+          <div>
+            <h3 className="h-[2.3rem] w-[100%]   text-xl font-normal text-center p-1 sm:pt-4  xl:text-2xl">
+              Affordability
+            </h3>
+
+            <p className="text-center sm:text-[18.2px] sm:pt-3 lg:text-xl xl:text-[26px]  xl:mt-4">
+              we have confidence in conveying quality transportation at open
+              rates. Our obligation to moderateness guarantees you partake in an
+              agreeable and solid excursion without settling for less on help
+              greatness.  
+            </p>
+          </div>
         </div>
       </div>
-      <div className="mt-32">
-        <img src={section} alt="section" width="100%" height="23px" />
+
+      <div className="h-[25.2rem] w-[100%] mt-5   sm:flex sm:h-[10.3rem] sm:w-[100%] lg:h-[16rem]">
+        <img
+          className="h-[12.3rem] w-[100%] sm:h-[10rem] sm:w-[49.2%] lg:h-[15.8rem]  lg:w-[49.5%]"
+          src="/dist/picture/picture123.png"
+          alt=""
+        />
+        <img
+          className="h-[12.3rem] w-[100%] mt-2 sm:h-[10rem] sm:w-[49.2%] sm:mt-0 sm:ml-3 lg:h-[15.8rem] lg:w-[49.5%]"
+          src="/dist/picture/picture987.png"
+          alt=""
+        />
       </div>
-      <div>
-        <h2 className="text-orange-500 font-bold text-6xl flex justify-center mt-28">
-          How To Book?
-        </h2>
-        <p className="text-center mt-14 text-2xl px-7 tracking-wide">
-          Booking a ride with “the taxi guru” is fast and hassle-free. Choose
-          the method that suits you best - use our easy to user-friendly app for
-          consistent online appointments, visit our site to reserve a spot, or
-          essentially call us. Our devoted client support group is prepared to
-          help you. Partake in the accommodation of efficient booking, and trust
-          us to give a reliable and agreeable excursion custom-made to your
-          inclinations. Any place you’re going, “the taxi guru” is here to make
-          your movement experience smooth and peaceful.
-        </p>
+
+      <h1 className="text-4xl text-[#FA8907] text-center mt-4 font-bold lg:text-[50px] ">
+        How to Book
+      </h1>
+
+      <p className="h-[22rem] w-[100%]  mt-2 p-2 text-center sm:h-[20rem] sm:text-2xl  sm::text-[30px] lg:h-[13rem] xl:text-[33px]">
+         Booking a ride with “the taxi guru” is fast and hassle-free. Choose the
+        method that suits you best – use our easy to user-friendly app for
+        consistent online appointments, visit our site to reserve a spot, or
+        essentially call us. Our devoted client support group is prepared to
+        help you. Partake in the accommodation of efficient booking, and trust
+        us to give a reliable and agreeable excursion custom-made to your
+        inclinations. Any place you’re going, “the taxi guru” is here to make
+        your movement experience smooth and peaceful. 
+      </p>
+
+      <div className="h-[36.3rem] w-[100%] bg-black mt-9 ">
+        <h1 className="h-[4rem] w-[100%] p-4 font-mono  text-4xl font-bold text-yellow-300 text-center lg:text-[50px] ">
+          HOW IT WORKS
+        </h1>
+
+        <div className="h-[32rem] w-[100%] bg-yellow-300 sm:flex ">
+          <div className="h-[10rem] w-[100%] bg-pink-400 flex flex-col justify-center items-center">
+            <img
+              className="h-[7rem] w-[7rem] rounded-[50%] "
+              src="/dist/picture/first picture.png"
+              alt=""
+            />
+            <h4 className="text-xl text-yellow-300 text-[30px] pt-3 font-bold">
+              Call
+            </h4>
+          </div>
+
+          <div className="h-[10rem]  mt-2 w-[100%] bg-red-50 flex flex-col justify-center items-center">
+            <img
+              className="h-[7rem] w-[7rem] rounded-[50%] "
+              src="/dist/picture/first picture.png"
+              alt=""
+            />
+            <h4 className="text-xl text-yellow-300 text-[30px] pt-3 font-bold">
+              Choose a car
+            </h4>
+          </div>
+
+          <div className="h-[10rem] mt-2 w-[100%] bg-red-500 flex flex-col justify-center items-center">
+            <img
+              className="h-[7rem] w-[7rem] rounded-[50%] "
+              src="/dist/picture/first picture.png"
+              alt="image"
+            />
+            <h4 className="text-xl text-yellow-300 text-[30px] pt-3 font-bold">
+              Enjoy the ride
+            </h4>
+          </div>
+        </div>
       </div>
-      <div  className={`bg-cover md:h-screen  h-[35vh] w-[100%] bg-[url('/images/about us/1800 1.png')]`} >
-        
-      </div>
-      <div className="mt-48">
-        <Footer></Footer>
-      </div>
-    </div>
+    </>
   );
 }
-                                                                                                                  
-export default AboutPage;          
+
+export default AboutPage;

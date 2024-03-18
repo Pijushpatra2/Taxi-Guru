@@ -25,9 +25,9 @@ function App() {
             <Route path="chandigarh-to-punjab" element={<ServiceC2P />} />
             <Route path="chandigarh-to-himachal" element={<ServiceC2HP />} />
           </Route>
-          <Route path="/about-us" element={<AboutPage />} />
           <Route path="/contact-us" element={<ContactPage />} />
           <Route path="/slider" element={<Slider />} />
+          <Route path="/about-us" element={<AboutPage />} />
         </Routes>
       </BrowserRouter>
     </>
