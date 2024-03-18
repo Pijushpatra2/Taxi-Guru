@@ -7,7 +7,6 @@ import { styles } from "../../Style";
 export default function ContactPage() {
   return (
     <div className="w-[100%] m-0 lg:w-[70%] lg:mx-[15%]">
-    
       <div className="text-center">
         <h2 className={`${styles.forResponsive}font-sans font-bold mt-8`}>
           Contact Us
@@ -21,8 +20,8 @@ export default function ContactPage() {
 
       {/* from dev */}
 
-      <div className="flex-row lg:flex">
-        <div className=" h-[650px] bg-[#FA8907] rounded-xl pt-7 mt-16 shadow-3xl lg:w-[40%] ">
+      <div className="flex-row lg:flex mt-16">
+        <div className=" h-[650px] bg-[#FA8907] rounded-xl pt-7  shadow-3xl lg:w-[40%] ">
           <h4 className="text-3xl font-semibold tracking-wider pl-8 text-white">
             Contact Information
           </h4>
@@ -96,66 +95,65 @@ export default function ContactPage() {
             <div className="bg-[#1B1B1B] h-7 w-7 rounded-full"></div>
           </div>
         </div>
+
         {/* From */}
-        <div className=" mt-[101px] bg-gray-700 lg:w-[60%]">
+
+        <div className="w-[100%] bg-gray-700 mt-4 p-3 lg:w-[60%] lg:mt-10">
           <form className="text-gray-500">
-            <div className="flex">
-              <div className="mb-4 text-lg">
+            <div className="flex lg:w-[100%] gap-[10%]">
+              <div className="mb-4 text-lg w-[45%]">
                 <label htmlFor="First Name">First Name</label>
                 <input
                   type="text"
-                  className="border-b-2 w-[325px] border-gray- h-12 outline-none text-base"
+                  className="border-b-2 border-gray- h-12 outline-none text-base w-full"
                 />
               </div>
 
-              <div className="mb-4 text-lg">
+              <div className="mb-4 text-lg w-[45%]">
                 <label htmlFor="First Name">Last Name</label>
                 <input
                   type="text"
-                  className="border-b-2 w-[325px] border-gray- h-12 outline-none text-base"
-                />
-              </div>
-            </div>
-            <div className="flex gap-32  ml-[90px] mt-16">
-              <div className="mb-4 text-lg">
-                <label htmlFor="Email">Email</label>
-                <input
-                  type="text"
-                  className="border-b-2 w-[325px] border-gray- h-12 outline-none text-base"
-                />
-              </div>
-
-              <div className="mb-4 text-lg">
-                <label htmlFor="Phone Number">Phone Number</label>
-
-                <input
-                  type="text"
-                  className="border-b-2 w-[325px] border-gray- h-12 outline-none text-base"
-                />
-              </div>
-            </div>
-            <div className="flex  ml-[90px] mt-16">
-              <div className="mb-4 text-lg">
-                <label htmlFor="Email">Journey Type</label>
-
-                <input
-                  type="text"
-                  className="border-b-2 w-[765px] border-gray- h-12 outline-none text-base"
-                />
-              </div>
-            </div>
-            <div className="flex  ml-[95px] mt-16">
-              <div className="mb-4 text-lg">
-                <label htmlFor="Email">Pick and Drop Address *</label>
-
-                <input
-                  type="text"
-                  className="border-b-2 w-[765px] border-gray- h-12 outline-none text-base"
+                  className="border-b-2 border-gray- h-12 outline-none text-base w-full"
                 />
               </div>
             </div>
 
-            <div className="  ml-[633px] mt-16">
+            <div className="flex lg:w-[100%] gap-[10%]">
+              <div className="mb-4 text-lg w-[45%]">
+                <label htmlFor="First Name">Email</label>
+                <input
+                  type="text"
+                  className="border-b-2 border-gray- h-12 outline-none text-base w-full"
+                />
+              </div>
+
+              <div className="mb-4 text-lg w-[45%]">
+                <label htmlFor="First Name">Phone no</label>
+                <input
+                  type="text"
+                  inputMode="numeric"
+                  className="border-b-2 border-gray- h-12 outline-none text-base w-full"
+                />
+              </div>
+            </div>
+
+            <div className="mb-4 text-lg w-full">
+              <label htmlFor="First Name">Journey Type</label>
+              <input
+                type="text"
+                className="border-b-2 border-gray- h-12 outline-none text-base w-full"
+              />
+            </div>
+
+            <div className="mb-4 text-lg w-full">
+              <label htmlFor="First Name">Pick up and Drop Address *</label>
+              <input
+                type="text"
+                className="border-b-2 border-gray- h-12 outline-none text-base w-full"
+              />
+            </div>
+
+            <div className=" mt-16">
               <button className="bg-[#FA8907] text-white h-[56px] w-[195px] rounded-md text-lg shadow-lg">
                 Send Message
               </button>
@@ -167,7 +165,7 @@ export default function ContactPage() {
       {/* from end */}
 
       <div>
-        <h2 className="mt-10 text-center text-4xl font-extrabold">
+        <h2 className={`${styles.forResponsive}mt-10 text-center font-extrabold`}>
           24/7 available for customer support
         </h2>
         <p className="text-center text-xl font-medium tracking-wider mt-5">
@@ -180,7 +178,7 @@ export default function ContactPage() {
         <img src={Map} alt="" className="w-full h-30" />
       </div>
       <div className="mt-32">
-        <Footer/>
+        <Footer />
       </div>
     </div>
   );
