@@ -3,6 +3,7 @@ import about2 from "/images/about us/about2.png";
 import gallery from "/images/about us/gallery.png";
 import section from "/images/about us/section.png";
 import action1 from "/images/about us/1800 1.png";
+import maskgroup1 from "/images/about us/Mask Group.png";
 import Footer from "../../Common/components/Footer";
 
 function AboutPage() {
@@ -62,7 +63,7 @@ function AboutPage() {
         <div className="h-[25.7rem] w-[100%]  sm:h-[34.7rem] lg:h-[41.7rem] xl:h-[42rem]">
           <img
             className="h-[100%] w-[100%]"
-            src={about2}
+            src={maskgroup1}
             alt=""
           />
         </div>
@@ -77,7 +78,7 @@ function AboutPage() {
           <div className="h-[11rem] w-[100%]  sm:h-[11.4rem] sm:w-[15.4rem] sm:object-contain lg:w-[20.7rem] xl:h-[17rem] xl:w-[29.9rem] 2xl:w-[52.8rem]">
             <img
               className="h-[100%] w-[100%]"
-              src="/dist/picture/first picture.png"
+              src={action1}
               alt=""
             />
           </div>
@@ -121,7 +122,7 @@ function AboutPage() {
           <div className="h-[11rem]  w-[100%] sm:h-[11.2rem] sm:w-[15.4rem] sm:object-contain lg:w-[20.9rem] xl:h-[17rem] xl:w-[29.2rem] 2xl:w-[52.8rem]">
             <img
               className="h-[100%] w-[100%]"
-              src="/dist/picture/first picture.png"
+              src={action1}
               alt=""
             />
           </div>
@@ -144,7 +145,7 @@ function AboutPage() {
       <div className="h-[25.2rem] w-[100%] mt-5   sm:flex sm:h-[10.3rem] sm:w-[100%] lg:h-[16rem]">
         <img
           className="h-[12.3rem] w-[100%] sm:h-[10rem] sm:w-[49.2%] lg:h-[15.8rem]  lg:w-[49.5%]"
-          src="/dist/picture/picture123.png"
+          src={maskgroup1}
           alt=""
         />
         <img
