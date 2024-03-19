@@ -7,24 +7,29 @@ import { styles } from "../../Style";
 import axios from "axios";
 export default function ContactPage() {
   const [formData, setFormData] = useState({});
+  const [error, setError] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
-      [name]: value
+      [name]: value,
     });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:3000/api/createuserrequest', formData);
-      alert('Data saved successfully');
+      await axios.post("http://localhost:3000/api/createuserrequest", formData);
+      alert("Data saved successfully");
       setFormData({});
     } catch (err) {
-      console.error(err);
-      alert('Failed to save Data');
+      if (err.response) {
+        setError(err.response.data.errors);
+      } else {
+        setError("An error occurred. Please try again later.");
+      }
+      // alert("Failed to save Data");
     }
   };
 
@@ -129,7 +134,7 @@ export default function ContactPage() {
                 <input
                   type="text"
                   name="firstName"
-                  value={formData.firstName || ''}
+                  value={formData.firstName || ""}
                   onChange={handleChange}
                   className="border-b-2 border-gray- h-12 outline-none text-base w-full"
                 />
@@ -140,7 +145,7 @@ export default function ContactPage() {
                 <input
                   type="text"
                   name="lastName"
-                  value={formData.lastName || ''}
+                  value={formData.lastName || ""}
                   onChange={handleChange}
                   className="border-b-2 border-gray- h-12 outline-none text-base w-full"
                 />
@@ -153,7 +158,7 @@ export default function ContactPage() {
                 <input
                   type="text"
                   name="email"
-                  value={formData.email || ''}
+                  value={formData.email || ""}
                   onChange={handleChange}
                   className="border-b-2 border-gray- h-12 outline-none text-base w-full"
                 />
@@ -164,7 +169,7 @@ export default function ContactPage() {
                 <input
                   type="text"
                   name="phoneNumber"
-                  value={formData.phoneNumber || ''}
+                  value={formData.phoneNumber || ""}
                   onChange={handleChange}
                   inputMode="numeric"
                   className="border-b-2 border-gray- h-12 outline-none text-base w-full"
@@ -175,38 +180,64 @@ export default function ContactPage() {
             <div className="mb-4 text-lg w-full">
               <label htmlFor="Journey Type">Journey Type</label>
               <input
-                 type="text"
-                 name="journeyType"
-                 value={formData.journeyType || ''}
-                 onChange={handleChange}
+                type="text"
+                name="journeyType"
+                value={formData.journeyType || ""}
+                onChange={handleChange}
                 className="border-b-2 border-gray- h-12 outline-none text-base w-full"
               />
             </div>
 
             <div className="mb-4 text-lg w-full">
-              <label htmlFor="Address">Pick up and Drop Address *</label>
+              <label htmlFor="PickUpAddress">Pick up Address *</label>
               <input
                 type="text"
-                name="address"
-                value={formData.address || ''}
+                name="pickupAddress"
+                value={formData.pickupAddress || ""}
+                onChange={handleChange}
+                className="border-b-2 border-gray- h-12 outline-none text-base w-full"
+              />
+            </div>
+            <div className="mb-4 text-lg w-full">
+              <label htmlFor="DropAddress">Drop Address *</label>
+              <input
+                type="text"
+                name="dropAddress"
+                value={formData.dropAddress || ""}
                 onChange={handleChange}
                 className="border-b-2 border-gray- h-12 outline-none text-base w-full"
               />
             </div>
 
             <div className=" mt-16">
-              <button className="bg-[#FA8907] text-white h-[56px] w-[195px] rounded-md text-lg shadow-lg" onClick={handleSubmit}>
+              <button
+                className="bg-[#FA8907] text-white h-[56px] w-[195px] rounded-md text-lg shadow-lg"
+                onClick={handleSubmit}
+              >
                 Send Message
               </button>
             </div>
           </form>
+
+          <div className=" text-red-500">
+            {error &&
+              error.map((err) => {
+                return (
+                  <div key={err} className="">
+                    {err.msg}
+                  </div>
+                );
+              })}
+          </div>
         </div>
       </div>
 
       {/* from end */}
 
       <div>
-        <h2 className={`${styles.forResponsive}mt-10 text-center font-extrabold`}>
+        <h2
+          className={`${styles.forResponsive}mt-10 text-center font-extrabold`}
+        >
           24/7 available for customer support
         </h2>
         <p className="text-center text-xl font-medium tracking-wider mt-5">

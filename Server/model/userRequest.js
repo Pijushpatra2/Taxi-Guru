@@ -9,7 +9,8 @@ const UserRequestSchema = new Schema({
   journeyType: { type: String, default: "Single" },
   seen: { type: Boolean, default: false },
   dateTime: { type: Date, default: Date.now },
-  address: { type: String, require: true },
+  pickupAddress: { type: String, require: true },
+  dropAddress: { type: String, require: true },
 });
 
 module.exports = mongoose.model("userRequest", UserRequestSchema);
