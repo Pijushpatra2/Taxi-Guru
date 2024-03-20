@@ -29,7 +29,8 @@ const verifyPassword = async (req, res) => {
       return;
     }
 
-    if (realPassCode.passCode === passCode) {
+    if (passCode && realPassCode.passCode === passCode) {
+
       res.status(200).json({ message: "Password verified" });
     } else {
       res.status(401).json({ message: "Invalid password" });

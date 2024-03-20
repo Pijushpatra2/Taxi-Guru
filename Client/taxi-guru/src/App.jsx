@@ -2,7 +2,6 @@ import NavBar from "./Common/components/NavBar";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./Pages/HomePage/HomePage";
 import Services from "./Pages/ServicesPage/Services";
-
 import ServiceC2D from "./Pages/ServicesPage/ServiceC2D";
 import ServiceC2H from "./Pages/ServicesPage/ServiceC2H";
 import ServiceC2P from "./Pages/ServicesPage/ServiceC2P";
@@ -19,7 +18,6 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path="/services">
             <Route index={true} element={<Services />} />
-
             <Route path="chandigarh-to-delhi" element={<ServiceC2D />} />
             <Route path="chandigarh-to-haryana" element={<ServiceC2H />} />
             <Route path="chandigarh-to-punjab" element={<ServiceC2P />} />

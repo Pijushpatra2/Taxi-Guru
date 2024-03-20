@@ -16,7 +16,7 @@ export default function ContactPage() {
       [name]: value,
     });
   };
-
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -50,10 +50,11 @@ export default function ContactPage() {
         {/* from dev */}
 
         <div className="flex-row lg:flex mt-16">
-          <div className=" h-[650px] bg-[#FA8907] rounded-xl p-4 text-center  shadow-3xl lg:w-[40%] ">
+          <div className="mx-4 h-auto bg-[#FA8907] rounded-xl p-4  shadow-3xl lg:w-[40%] md:mx-4">
             <h4 className="text-3xl font-semibold tracking-wider text-white">
               Contact Information
             </h4>
+
             <p className="mt-4 text-lg font-extralight tracking-widest text-white ">
               Say something to start a live chat!
             </p>
@@ -77,7 +78,7 @@ export default function ContactPage() {
                   />
                 </svg>
               </div>
-              <div className="pb-1 ml-5 text-lg font-thin">
+              <div className="pb-1 ml-4 text-lg font-thin">
                 <p>+91–9465342092</p>
               </div>
             </div>
@@ -93,7 +94,7 @@ export default function ContactPage() {
                   <path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
                 </svg>
               </div>
-              <div className="pb-1 ml-5 text-lg font-thin">
+              <div className="pb-1 ml-4 text-lg font-thin">
                 <p>parvinderlidder8092@gmail.com</p>
               </div>
             </div>
@@ -112,8 +113,8 @@ export default function ContactPage() {
                   />
                 </svg>
               </div>
-              <div className="pb-1 ml-5 text-lg font-thin">
-                <p>
+              <div>
+                <p className="pb-1 ml-4 text-lg font-thin">
                   Seunk, Mullanpur Garibdass, New Chandigarh, 140901
                 </p>
               </div>
@@ -122,6 +123,14 @@ export default function ContactPage() {
               <div className="bg-[#1B1B1B] h-7 w-7 rounded-full mr-6"></div>
               <div className="bg-[#FFFFFF] h-7 w-7 rounded-full mr-6"></div>
               <div className="bg-[#1B1B1B] h-7 w-7 rounded-full"></div>
+            </div>
+            
+            <div className="absolute lg:top-[750px] lg:left-[690px] hidden lg:block">
+              <img src={Ellipse1} alt="design" className=" w-[200px] h-[200px]"/>
+            </div>
+            <div className="absolute lg:top-[92.5%] lg:left-[68.5%]
+">
+              <img src={Ellipse2} alt="" className=" w-[100px] h-[100px]" />
             </div>
           </div>
 
