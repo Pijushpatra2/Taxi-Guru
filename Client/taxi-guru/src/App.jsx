@@ -9,7 +9,6 @@ import ServiceC2P from "./Pages/ServicesPage/ServiceC2P";
 import ServiceC2HP from "./Pages/ServicesPage/ServiceC2HP";
 import AboutPage from "./Pages/AboutPage/AboutPage";
 import ContactPage from "./Pages/ContactPage/ContactPage";
-import Slider from "./Pages/ServicesPage/components/Slider";
 import AdminPage from "./Pages/AdminPage/AdminPage";
 function App() {
   return (

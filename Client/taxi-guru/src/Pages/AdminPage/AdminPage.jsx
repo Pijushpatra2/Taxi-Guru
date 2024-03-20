@@ -53,8 +53,11 @@ export default function AdminPage() {
         "http://localhost:3000/api/verify-password",
         { passCode }
       );
-      setAllowView(true);
+      if (response.status === 200) {
+        setAllowView(true);
+      }
     } catch (err) {
+      console.log(error);
       if (err.response) {
         setError(err.response.data.message);
       } else {
