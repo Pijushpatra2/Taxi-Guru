@@ -5,20 +5,11 @@ import Footer from "../../Common/components/Footer";
 import Map from "/images/contact/Map.png";
 import { styles } from "../../Style";
 import axios from "axios";
+import { useForm } from "react-hook-form";
 export default function ContactPage() {
-  const [formData, setFormData] = useState({});
-  const [error, setError] = useState("");
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-  
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const { register, handleSubmit, formState: { errors } } = useForm({mode:"onChange"});
+  const handleFormSubmitData = async (e) => {
+   
     try {
       await axios.post("http://localhost:3000/api/createuserrequest", formData);
       alert("Data saved successfully");
@@ -29,9 +20,66 @@ export default function ContactPage() {
       } else {
         setError("An error occurred. Please try again later.");
       }
-      // alert("Failed to save Data");
     }
+
   };
+  // const handleError = (errors) => {};
+  const [formData, setFormData] = useState({});
+  const [error, setError] = useState("");
+  const validationOptions = {
+    firstName: {
+      required: "First Name is required", minLength: {
+        value: 3,
+        message: "First Name should be greater than 3 letters"
+      },
+    },
+    email: { required: "Email is required",
+    pattern: {
+      value: /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/gm,
+      message: "Invalid Email"
+    }
+    },
+    phoneNumber: {
+      required: "Phone number is required",
+      pattern: {
+        value: /^\s*(?:\+(\d{1,3}))[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})$/gm,
+        message: "Invalid Phone Number, include country code too."
+      }
+    
+    },
+    pickupAddress: {
+      required: "Pickup Address is required",
+      
+      minLength: {
+        value: 9,
+        message: "Enter Full Pickup address"
+      },
+    },
+    dropAddress: {
+      required: "Drop Address is required",
+
+      minLength: {
+        value: 9,
+        message: "Enter Full Drop address"
+      }
+    }
+  
+    // password: {
+    //   required: "Password is required",
+    //   minLength: {
+    //     value: 8,
+    //     message: "Password must have at least 8 characters"
+    //   }
+    // }
+  };
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+  const handleError = (errors) => {};
 
   return (
     <>
@@ -124,30 +172,27 @@ export default function ContactPage() {
               <div className="bg-[#FFFFFF] h-7 w-7 rounded-full mr-6"></div>
               <div className="bg-[#1B1B1B] h-7 w-7 rounded-full"></div>
             </div>
-            
-            <div className="absolute lg:top-[750px] lg:left-[690px] hidden lg:block">
-              <img src={Ellipse1} alt="design" className=" w-[200px] h-[200px]"/>
-            </div>
-            <div className="absolute lg:top-[92.5%] lg:left-[68.5%]
-">
-              <img src={Ellipse2} alt="" className=" w-[100px] h-[100px]" />
-            </div>
           </div>
 
           {/* From */}
 
           <div className="w-[100%] mt-4 p-3 lg:w-[60%] lg:mt-10 lg:pl-10">
-            <form className="text-gray-500">
-              <div className="flex lg:w-[100%] gap-[10%]">
+            {/* <form onSubmit={()=>handleSubmitFromHook(handleSubmit, handleError)} className="text-gray-500"> */}
+            <form onSubmit={handleSubmit(handleFormSubmitData, handleError)}>
+            <div className="flex lg:w-[100%] gap-[10%]">
                 <div className="mb-4 text-lg w-[45%]">
                   <label htmlFor="First Name">First Name</label>
                   <input
                     type="text"
                     name="firstName"
                     value={formData.firstName || ""}
+                    {...register('firstName', validationOptions.firstName) }
                     onChange={handleChange}
                     className="border-b-2 border-gray- h-10 outline-none text-base w-full"
                   />
+                   <small className="text-red-600">
+          {errors?.firstName && errors.firstName.message}
+        </small>
                 </div>
 
                 <div className="mb-4 text-lg w-[45%]">
@@ -155,10 +200,13 @@ export default function ContactPage() {
                   <input
                     type="text"
                     name="lastName"
+                    {...register('lastName', validationOptions.lastName) }
+
                     value={formData.lastName || ""}
                     onChange={handleChange}
                     className="border-b-2 border-gray- h-10 outline-none text-base w-full"
                   />
+                     <small className="text-red-600">{errors?.lastName && errors.lastName.message}</small>
                 </div>
               </div>
 
@@ -168,10 +216,14 @@ export default function ContactPage() {
                   <input
                     type="text"
                     name="email"
+                    {...register('email', validationOptions.email) }
+
                     value={formData.email || ""}
                     onChange={handleChange}
                     className="border-b-2 border-gray- h-10 outline-none text-base w-full"
                   />
+                     <small className="text-red-600">{errors?.email && errors.email.message}</small>
+
                 </div>
 
                 <div className="mb-4 text-lg w-[45%]">
@@ -180,10 +232,14 @@ export default function ContactPage() {
                     type="text"
                     name="phoneNumber"
                     value={formData.phoneNumber || ""}
+                    {...register('phoneNumber', validationOptions.phoneNumber) }
+
                     onChange={handleChange}
                     inputMode="numeric"
                     className="border-b-2 border-gray- h-10 outline-none text-base w-full"
                   />
+                                       <small className="text-red-600">{errors?.phoneNumber && errors.phoneNumber.message}</small>
+
                 </div>
               </div>
 
@@ -204,25 +260,33 @@ export default function ContactPage() {
                   type="text"
                   name="pickupAddress"
                   value={formData.pickupAddress || ""}
+                  {...register('pickupAddress', validationOptions.pickupAddress) }
+
                   onChange={handleChange}
                   className="border-b-2 border-gray- h-10 outline-none text-base w-full"
                 />
+                                       <small className="text-red-600">{errors?.pickupAddress && errors.pickupAddress.message}</small>
+
               </div>
               <div className="mb-4 text-lg w-full">
                 <label htmlFor="DropAddress">Drop Address *</label>
                 <input
                   type="text"
                   name="dropAddress"
+                  {...register('dropAddress', validationOptions.dropAddress) }
+
                   value={formData.dropAddress || ""}
                   onChange={handleChange}
                   className="border-b-2 border-gray- h-10 outline-none text-base w-full"
                 />
+                                                       <small className="text-red-600">{errors?.dropAddress && errors.dropAddress.message}</small>
+
               </div>
 
               <div className=" mt-14  flex justify-center lg:justify-end">
                 <button
                   className="bg-[#FA8907] text-white rounded-md text-lg shadow-lg px-5 py-4 hover:bg-white hover:text-[#FA8907]"
-                  onClick={handleSubmit}
+                  // onClick={handleSubmit}
                 >
                   Send Message
                 </button>

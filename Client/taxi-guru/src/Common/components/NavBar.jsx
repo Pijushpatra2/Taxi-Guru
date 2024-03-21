@@ -1,9 +1,9 @@
 import { useState } from "react";
-import logo from "/images/common/logo.png";
+import logo from "/images/common/logo2.png";
 import { NavLink } from "react-router-dom";
 import { HiMenu, HiX } from "react-icons/hi";
 import { styles } from "../../Style";
-
+import { IoIosArrowDown } from "react-icons/io";
 function NavBar() {
   const [toggle, setToggle] = useState(false);
   const [showService, setshowService] = useState(false);
@@ -18,15 +18,18 @@ function NavBar() {
         className={`${styles.paddingX} w-full text-white bg-black flex top-0 `}
       >
         <div className="w-full flex justify-between items-center mx-auto">
-          <NavLink to="/">
-            <img className="inline object-contain" src={logo} alt="Logo" />
-          </NavLink>
+          <div className="w-[80px] h-[75px] lg:w-[130px] lg:h-[100px]">
+            <NavLink to="/">
+              <img src={logo} alt="Logo" className="w-[100%] h-[100%]" />
+            </NavLink>
+          </div>
+
           <div className="">
-            <ul className="hidden lg:flex flex-row gap-8">
+            <ul className="hidden lg:flex flex-row gap-4">
               <NavLink
                 to="/"
                 className={({ isActive }) =>
-                  `my-6 px-4 py-1 text-2xl  hover:bg-primary rounded-full mx-2 ${
+                  `px-4 py-2  text-[20px]  hover:bg-primary rounded-full ${
                     isActive ? "bg-primary" : ""
                   }`
                 }
@@ -36,7 +39,7 @@ function NavBar() {
               <NavLink
                 to="/about-us"
                 className={({ isActive }) =>
-                  `my-6 px-4 py-1 text-2xl  hover:bg-primary rounded-full mx-2 ${
+                  `px-4 py-2  text-[20px]  hover:bg-primary rounded-full ${
                     isActive ? "bg-primary" : ""
                   }`
                 }
@@ -48,12 +51,13 @@ function NavBar() {
                 onMouseLeave={() => setshowService(false)}
                 to="/services"
                 className={({ isActive }) =>
-                  `my-6 px-4 py-1 text-2xl  hover:bg-primary rounded-full mx-2 relative ${
+                  `px-4 py-2  text-[20px]  hover:bg-primary rounded-full relative flex items-center gap-1${
                     isActive ? "bg-primary" : ""
                   }`
                 }
               >
                 SERVICES
+                <IoIosArrowDown />
                 {showService && (
                   <li
                     onMouseEnter={() => setshowService(true)}
@@ -86,7 +90,7 @@ function NavBar() {
               <NavLink
                 to="/contact-us"
                 className={({ isActive }) =>
-                  `my-6 px-4 py-1 text-2xl  hover:bg-primary rounded-full mx-2 ${
+                  `px-4 py-2  text-[20px]  hover:bg-primary rounded-full ${
                     isActive ? "bg-primary" : ""
                   }`
                 }
@@ -113,7 +117,7 @@ function NavBar() {
             <NavLink
               to="/"
               className={({ isActive }) =>
-                `my-6 px-8 py-1 text-2xl  hover:bg-primary rounded-full mx-2 ${
+                `my-6 px-8 py-1 text-2xl  hover:bg-primary rounded-full ${
                   isActive ? "bg-primary" : ""
                 }`
               }
@@ -124,7 +128,7 @@ function NavBar() {
             <NavLink
               to="/about-us"
               className={({ isActive }) =>
-                `my-6 px-8 py-1 text-2xl  hover:bg-primary rounded-full mx-2 ${
+                `my-6 px-8 py-1 text-2xl  hover:bg-primary rounded-full ${
                   isActive ? "bg-primary" : ""
                 }`
               }
@@ -135,7 +139,7 @@ function NavBar() {
             <NavLink
               to="/services"
               className={({ isActive }) =>
-                `my-6 px-8 py-1 text-2xl  hover:bg-primary rounded-full mx-2 ${
+                `my-6 px-8 py-1 text-2xl  hover:bg-primary rounded-full ${
                   isActive ? "bg-primary" : ""
                 }`
               }
@@ -146,7 +150,7 @@ function NavBar() {
             <NavLink
               to="/contact-us"
               className={({ isActive }) =>
-                `my-6 px-8 py-1 text-2xl  hover:bg-primary rounded-full mx-2 ${
+                `my-6 px-8 py-1 text-2xl  hover:bg-primary rounded-full ${
                   isActive ? "bg-primary" : ""
                 }`
               }
