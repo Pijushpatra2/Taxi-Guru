@@ -4,6 +4,7 @@ import ServiceData from "../data/ServiceData";
 import home_taxi from "/images/home/home_taxi.png";
 // import CountUpComponent from "../../HomePage/components/CountUpComponent";
 import DiamondComponent from "./DiamondComponent";
+import Footer from "../../../Common/components/Footer";
 export default function ServiceComponent(props) {
   const data = ServiceData[props.id];
 
@@ -117,7 +118,7 @@ export default function ServiceComponent(props) {
           </div>
         </div>
       </section>
-
+<Footer></Footer>
       {/* footer */}
       <div className="justify-between">
         <div className=" flex  justify-between items-center bg-primary p-6   font-bold text-4xl relative opacity-90">
