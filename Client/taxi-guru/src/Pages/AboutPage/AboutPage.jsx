@@ -6,11 +6,11 @@ import gallery3 from "/images/about us/gallery3.png";
 import section1 from "/images/about us/section1.png";
 import section2 from "/images/about us/section2.png";
 import Footer from "../../Common/components/Footer";
-
+import HowItWorks from "./components/HowItWorks";
 function AboutPage() {
   return (
     <>
-      <div className="md:w-[70%] w-[90%] mx-[5%] lg:mx-[15%]">
+      <div className="md:w-[70%] w-[90%] mx-[5%] md:mx-[15%]">
         <div className="h-auto w-[100%] lg:flex gap-4 border-4 p-4 rounded-lg my-16">
           <div className="lg:flex-1 p-5">
             <h1 className="text-[#FA8907] font-bold md:text-4xl text-3xl text-center">
@@ -117,8 +117,8 @@ function AboutPage() {
 
           <p className=" w-[100%]  mt-2 p-2 text-center  sm:text-2xl  ">
              Booking a ride with “the taxi guru” is fast and hassle-free. Choose
-            the method that suits you best – use our easy to user-friendly app
-            for consistent online appointments, visit our site to reserve a
+            the method that suits you best – use our easy to use user-friendly
+            app for consistent online appointments, visit our site to reserve a
             spot, or essentially call us. Our devoted client support group is
             prepared to help you. Partake in the accommodation of efficient
             booking, and trust us to give a reliable and agreeable excu ion
@@ -128,6 +128,7 @@ function AboutPage() {
         </div>
 
         {/*how it work*/}
+        <HowItWorks />
       </div>
       <Footer />
     </>

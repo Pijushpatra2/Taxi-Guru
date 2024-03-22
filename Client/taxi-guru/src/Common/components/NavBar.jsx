@@ -100,8 +100,10 @@ function NavBar() {
             </ul>
           </div>
         </div>
+        
 
         {/* Toggle button */}
+
         <button
           className="lg:hidden flex items-center px-3 py-2 text-white"
           onClick={handleToggle}
