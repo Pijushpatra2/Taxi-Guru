@@ -13,7 +13,7 @@ function AboutPage() {
       <div className="md:w-[70%] w-[90%] mx-[5%] md:mx-[15%]">
         <div className="h-auto w-[100%] lg:flex gap-4 border-4 p-4 rounded-lg my-16">
           <div className="lg:flex-1 p-5">
-            <h1 className="text-[#FA8907] font-bold md:text-4xl text-3xl text-center">
+            <h1 className="text-primary font-bold md:text-4xl text-3xl text-center">
               Who we are?
             </h1>
 
@@ -37,7 +37,7 @@ function AboutPage() {
             <img className="h-[100%] w-[100%]" src={about2} alt="maskgroup1" />
           </div>
           <div className="lg:flex-1">
-            <h1 className=" text-[#FA8907] font-bold  md:text-4xl text-3xl text-center">
+            <h1 className=" text-primary font-bold  md:text-4xl text-3xl text-center">
               Our Mission
             </h1>
 
@@ -60,7 +60,7 @@ function AboutPage() {
         </div>
 
         {/*next sec */}
-        <h1 className="text-[#FA8907] font-bold  md:text-4xl text-3xl text-center my-8">
+        <h1 className="text-primary font-bold  md:text-4xl text-3xl text-center my-8">
           Why choose us
         </h1>
 
@@ -111,7 +111,7 @@ function AboutPage() {
         {/*book*/}
 
         <div>
-          <h1 className="text-4xl text-[#FA8907] text-center my-6 font-bold lg:text-[50px] ">
+          <h1 className="text-4xl text-primary text-center my-6 font-bold lg:text-[50px] ">
             How to Book
           </h1>
 

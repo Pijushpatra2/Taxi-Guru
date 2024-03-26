@@ -9,7 +9,7 @@ import ServiceData from '../data/ServiceData';
 export default function Slider() {
   const images = ServiceData['slider']['slider_images'];
   return (
-    <div className="container w-[50%]">
+    <div className="container lg:w-[50%]">
       <Swiper
         effect={'coverflow'}
         grabCursor={true}

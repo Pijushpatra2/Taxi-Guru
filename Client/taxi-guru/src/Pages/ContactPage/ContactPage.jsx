@@ -7,9 +7,12 @@ import { styles } from "../../Style";
 import axios from "axios";
 import { useForm } from "react-hook-form";
 export default function ContactPage() {
-  const { register, handleSubmit, formState: { errors } } = useForm({mode:"onChange"});
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({ mode: "onChange" });
   const handleFormSubmitData = async (e) => {
-   
     try {
       await axios.post("http://localhost:3000/api/createuserrequest", formData);
       alert("Data saved successfully");
@@ -18,52 +21,54 @@ export default function ContactPage() {
       if (err.response) {
         setError(err.response.data.errors);
       } else {
-        setError("An error occurred. Please try again later.");
+        setError([{ msg: "An error occurred. Please try again later." }]);
       }
     }
-
   };
   // const handleError = (errors) => {};
   const [formData, setFormData] = useState({});
   const [error, setError] = useState("");
   const validationOptions = {
     firstName: {
-      required: "First Name is required", minLength: {
+      required: "First Name is required",
+      minLength: {
         value: 3,
-        message: "First Name should be greater than 3 letters"
+        message: "First Name should be greater than 3 letters",
       },
     },
-    email: { required: "Email is required",
-    pattern: {
-      value: /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/gm,
-      message: "Invalid Email"
-    }
+    email: {
+      required: "Email is required",
+      pattern: {
+        value:
+          /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/gm,
+        message: "Invalid Email",
+      },
     },
     phoneNumber: {
       required: "Phone number is required",
       pattern: {
-        value: /^\s*(?:\+(\d{1,3}))[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})$/gm,
-        message: "Invalid Phone Number, include country code too."
-      }
-    
+        value:
+          /^\s*(?:\+(\d{1,3}))[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})$/gm,
+        message: "Invalid Phone Number, include country code too.",
+      },
     },
     pickupAddress: {
       required: "Pickup Address is required",
-      
+
       minLength: {
-        value: 9,
-        message: "Enter Full Pickup address"
+        value: 5,
+        message: "Enter Full Pickup address",
       },
     },
     dropAddress: {
       required: "Drop Address is required",
 
       minLength: {
-        value: 9,
-        message: "Enter Full Drop address"
-      }
-    }
-  
+        value: 5,
+        message: "Enter Full Drop address",
+      },
+    },
+
     // password: {
     //   required: "Password is required",
     //   minLength: {
@@ -98,7 +103,7 @@ export default function ContactPage() {
         {/* from dev */}
 
         <div className="flex-row lg:flex mt-16">
-          <div className="mx-4 h-auto bg-[#FA8907] rounded-xl p-4  shadow-3xl lg:w-[40%] md:mx-4">
+          <div className="mx-4 h-auto bg-primary rounded-xl p-4  shadow-3xl lg:w-[40%] md:mx-4">
             <h4 className="text-3xl font-semibold tracking-wider text-white">
               Contact Information
             </h4>
@@ -179,20 +184,20 @@ export default function ContactPage() {
           <div className="w-[100%] mt-4 p-3 lg:w-[60%] lg:mt-10 lg:pl-10">
             {/* <form onSubmit={()=>handleSubmitFromHook(handleSubmit, handleError)} className="text-gray-500"> */}
             <form onSubmit={handleSubmit(handleFormSubmitData, handleError)}>
-            <div className="flex lg:w-[100%] gap-[10%]">
+              <div className="flex lg:w-[100%] gap-[10%]">
                 <div className="mb-4 text-lg w-[45%]">
                   <label htmlFor="First Name">First Name</label>
                   <input
                     type="text"
                     name="firstName"
                     value={formData.firstName || ""}
-                    {...register('firstName', validationOptions.firstName) }
+                    {...register("firstName", validationOptions.firstName)}
                     onChange={handleChange}
                     className="border-b-2 border-gray- h-10 outline-none text-base w-full"
                   />
-                   <small className="text-red-600">
-          {errors?.firstName && errors.firstName.message}
-        </small>
+                  <small className="text-red-600">
+                    {errors?.firstName && errors.firstName.message}
+                  </small>
                 </div>
 
                 <div className="mb-4 text-lg w-[45%]">
@@ -200,13 +205,14 @@ export default function ContactPage() {
                   <input
                     type="text"
                     name="lastName"
-                    {...register('lastName', validationOptions.lastName) }
-
+                    {...register("lastName", validationOptions.lastName)}
                     value={formData.lastName || ""}
                     onChange={handleChange}
                     className="border-b-2 border-gray- h-10 outline-none text-base w-full"
                   />
-                     <small className="text-red-600">{errors?.lastName && errors.lastName.message}</small>
+                  <small className="text-red-600">
+                    {errors?.lastName && errors.lastName.message}
+                  </small>
                 </div>
               </div>
 
@@ -216,14 +222,14 @@ export default function ContactPage() {
                   <input
                     type="text"
                     name="email"
-                    {...register('email', validationOptions.email) }
-
+                    {...register("email", validationOptions.email)}
                     value={formData.email || ""}
                     onChange={handleChange}
                     className="border-b-2 border-gray- h-10 outline-none text-base w-full"
                   />
-                     <small className="text-red-600">{errors?.email && errors.email.message}</small>
-
+                  <small className="text-red-600">
+                    {errors?.email && errors.email.message}
+                  </small>
                 </div>
 
                 <div className="mb-4 text-lg w-[45%]">
@@ -232,26 +238,40 @@ export default function ContactPage() {
                     type="text"
                     name="phoneNumber"
                     value={formData.phoneNumber || ""}
-                    {...register('phoneNumber', validationOptions.phoneNumber) }
-
+                    {...register("phoneNumber", validationOptions.phoneNumber)}
                     onChange={handleChange}
                     inputMode="numeric"
                     className="border-b-2 border-gray- h-10 outline-none text-base w-full"
                   />
-                                       <small className="text-red-600">{errors?.phoneNumber && errors.phoneNumber.message}</small>
-
+                  <small className="text-red-600">
+                    {errors?.phoneNumber && errors.phoneNumber.message}
+                  </small>
                 </div>
               </div>
 
               <div className="mb-4 text-lg w-full">
                 <label htmlFor="Journey Type">Journey Type</label>
                 <input
+                  type="radio"
+                  name="journeyType"
+                  value="Single"
+                  onChange={handleChange}
+                ></input>
+                  <label htmlFor="Single">Single</label> {" "}
+                <input
+                  type="radio"
+                  name="journeyType"
+                  value="Double"
+                  onChange={handleChange}
+                ></input>
+                  <label htmlFor="Double">Double</label>
+                {/* <input
                   type="text"
                   name="journeyType"
                   value={formData.journeyType || ""}
                   onChange={handleChange}
                   className="border-b-2 border-gray- h-10 outline-none text-base w-full"
-                />
+                /> */}
               </div>
 
               <div className="mb-4 text-lg w-full">
@@ -260,32 +280,35 @@ export default function ContactPage() {
                   type="text"
                   name="pickupAddress"
                   value={formData.pickupAddress || ""}
-                  {...register('pickupAddress', validationOptions.pickupAddress) }
-
+                  {...register(
+                    "pickupAddress",
+                    validationOptions.pickupAddress
+                  )}
                   onChange={handleChange}
                   className="border-b-2 border-gray- h-10 outline-none text-base w-full"
                 />
-                                       <small className="text-red-600">{errors?.pickupAddress && errors.pickupAddress.message}</small>
-
+                <small className="text-red-600">
+                  {errors?.pickupAddress && errors.pickupAddress.message}
+                </small>
               </div>
               <div className="mb-4 text-lg w-full">
                 <label htmlFor="DropAddress">Drop Address *</label>
                 <input
                   type="text"
                   name="dropAddress"
-                  {...register('dropAddress', validationOptions.dropAddress) }
-
+                  {...register("dropAddress", validationOptions.dropAddress)}
                   value={formData.dropAddress || ""}
                   onChange={handleChange}
                   className="border-b-2 border-gray- h-10 outline-none text-base w-full"
                 />
-                                                       <small className="text-red-600">{errors?.dropAddress && errors.dropAddress.message}</small>
-
+                <small className="text-red-600">
+                  {errors?.dropAddress && errors.dropAddress.message}
+                </small>
               </div>
 
               <div className=" mt-14  flex justify-center lg:justify-end">
                 <button
-                  className="bg-[#FA8907] text-white rounded-md text-lg shadow-lg px-5 py-4 hover:bg-white hover:text-[#FA8907]"
+                  className="bg-primary text-white rounded-md text-lg shadow-lg px-5 py-4 hover:bg-white hover:text-primary"
                   // onClick={handleSubmit}
                 >
                   Send Message
@@ -316,11 +339,19 @@ export default function ContactPage() {
           </h2>
           <p className="text-center text-md font-medium tracking-wider mt-5 lg:text-xl">
             At “The Taxi Guru”, we understand that travel plans can change at
-            any time. That’s why our customer support team is available 24/7 to assist you.
+            any time. That’s why our customer support team is available 24/7 to
+            assist you.
           </p>
         </div>
         <div className="my-[50px] mx-6">
-          <img src={Map} alt="" className="w-full h-30" />
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3493555.2081052708!2d77.29792690784531!3d31.229732122009537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1711449045541!5m2!1sen!2sin"
+            className="w-full md:h-[600px] h-full"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+
+          {/* <img src={Map} alt="" className="w-full h-30" /> */}
         </div>
       </div>
       <Footer />

@@ -4,6 +4,7 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      animation: ["group-hover"],
       wordSpacing: {
         '2': '0.5rem',
         '4': '1rem',

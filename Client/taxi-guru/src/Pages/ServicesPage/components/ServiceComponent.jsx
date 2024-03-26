@@ -5,13 +5,14 @@ import home_taxi from "/images/home/home_taxi.png";
 // import CountUpComponent from "../../HomePage/components/CountUpComponent";
 import DiamondComponent from "./DiamondComponent";
 import Footer from "../../../Common/components/Footer";
+import { Link } from "react-router-dom";
 export default function ServiceComponent(props) {
   const data = ServiceData[props.id];
-  
+
   return (
     <div>
       <section>
-      {/* pt-8 pb-[100px] */}
+        {/* pt-8 pb-[100px] */}
         <div
           className={`bg-[url('/images/services/bg.png')] bg-center bg-no-repeat bg-cover  xs:min-h-[250px] flex flex-col justify-center items-center md:min-h-[500px]`}
         >
@@ -30,29 +31,32 @@ export default function ServiceComponent(props) {
           </div>
         </div>
       </section>
+
       <section>
-        <div className="">
+        <div className="mx-40 my-4">
           {/* map here */}
-          <img
-            src={data["div2"]["imgPath"]}
-            alt=""
-            className="w-screen bg-no-repeat object-cover"
-          />
+          <iframe
+            src={data["div2"]["map"]}
+            allowfullscreen=""
+            className="w-full h-screen"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
       </section>
       <section>
         <div className="bg-[url('/images/services/bg.png')] p-8 bg-center bg-cover bg-no-repeat ">
-          <div className="">
-        <div>
-        <p className=" text-white text-fa-bold text-[25px] text-center md:text-[40px]">
-              {data["div3"]["text1"]}
-            </p>
-        </div>
-          <div className=" text-center leading-tight">
-          <p className="text-white md:text-[32px] mt-8 xs:text-[20px]  ">
-              {data["div3"]["text2"]}
-            </p>
-          </div>
+          <div className="lg:px-40">
+            <div>
+              <p className=" text-white text-fa-bold text-[25px] text-center md:text-[40px]">
+                {data["div3"]["text1"]}
+              </p>
+            </div>
+            <div className=" text-center leading-tight">
+              <p className="text-white md:text-[32px] mt-8 xs:text-[20px]  ">
+                {data["div3"]["text2"]}
+              </p>
+            </div>
             <p className="md:text-[20px] text-white mt-8 text-center xs:text-[16px]">
               {data["div3"]["text3"]}
             </p>
@@ -68,12 +72,14 @@ export default function ServiceComponent(props) {
           <div className=" flex justify-center mt-4">
             <div className="bg-[rgb(250,137,7)]  flex justify-center p-3 gap-2 rounded-full  ">
               <HiPhone size={30} />
-              <p className=" text-[24px] font-bold">Contact Us</p>
+              <Link to="/contact-us">
+                <p className=" text-[24px] font-bold">Contact Us</p>
+              </Link>
             </div>
           </div>
         </div>
       </section>
-      <div className="h-[550px]">
+      <div className="">
         <Slider></Slider>
       </div>
 
@@ -118,17 +124,9 @@ export default function ServiceComponent(props) {
           </div>
         </div>
       </section>
-<Footer/>
-      {/* footer */}
-      <div className="justify-between">
-        <div className=" flex  justify-between items-center bg-primary p-6   font-bold text-4xl relative opacity-90">
-          <div className="h-20 font-black py-4 text-[25px] text-nowrap  ">Need Taxi ?</div>
 
-          <button className="bg-black uppercase text-white rounded-sm px-6 font-bold text-sm  py-2">
-            Contact
-          </button>
-        </div>
-      </div>
+      {/* footer */}
+      <Footer />
     </div>
   );
 }

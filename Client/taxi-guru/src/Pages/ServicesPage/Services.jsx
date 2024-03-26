@@ -7,7 +7,7 @@ export default function Services() {
       <div className=" ">
         <img
           src={data["div1"]["imgPath"]}
-          className=" h-[100%] w-full bg-cover object-cover "
+          className="h-[100%] w-full bg-cover object-cover md:h-[60vh]"
           alt="error"
         />
       </div>
@@ -31,7 +31,7 @@ export default function Services() {
                   {data["div2"]["text2"]}
                 </p>
                 <div className="text-center">
-                  <button className="bg-[#FA8907] text-black px-8 py-4 rounded-full text-3xl font-medium">
+                  <button className="bg-primary text-black px-8 py-4 rounded-full text-3xl font-medium">
                     Read More
                   </button>
                 </div>
@@ -49,7 +49,7 @@ export default function Services() {
                   {data["div3"]["text2"]}
                 </p>
                 <div className="text-center">
-                  <button className="bg-[#FA8907] text-black px-8 py-4 rounded-full text-3xl font-medium">
+                  <button className="bg-primary text-black px-8 py-4 rounded-full text-3xl font-medium">
                     Read More
                   </button>
                 </div>
@@ -81,7 +81,7 @@ export default function Services() {
                   {data["div4"]["text2"]}
                 </p>
                 <div className="text-center">
-                  <button className="bg-[#FA8907] text-black px-8 py-4 rounded-full text-3xl font-medium">
+                  <button className="bg-primary text-black px-8 py-4 rounded-full text-3xl font-medium">
                     Read More
                   </button>
                 </div>
@@ -90,7 +90,7 @@ export default function Services() {
           </div>
         </div>
       </div>
-    
+
       <div className="">
         <Footer></Footer>
       </div>
