@@ -1,5 +1,7 @@
 import Footer from "../../Common/components/Footer";
 import ServiceData from "./data/ServiceData";
+import { Link } from "react-router-dom";
+
 export default function Services() {
   const data = ServiceData["main"];
   return (
@@ -31,9 +33,12 @@ export default function Services() {
                   {data["div2"]["text2"]}
                 </p>
                 <div className="text-center">
+                <Link to="/contact-us">
                   <button className="bg-primary text-black px-8 py-4 rounded-full text-3xl font-medium">
-                    Read More
-                  </button>
+                    Learn More
+                    </button>
+                    </Link>
+
                 </div>
               </div>
             </div>
@@ -49,9 +54,11 @@ export default function Services() {
                   {data["div3"]["text2"]}
                 </p>
                 <div className="text-center">
+                <Link to="/contact-us">
                   <button className="bg-primary text-black px-8 py-4 rounded-full text-3xl font-medium">
-                    Read More
-                  </button>
+                    Learn More
+                    </button>
+                    </Link>
                 </div>
               </div>
             </div>
@@ -81,9 +88,11 @@ export default function Services() {
                   {data["div4"]["text2"]}
                 </p>
                 <div className="text-center">
+                <Link to="/contact-us">
                   <button className="bg-primary text-black px-8 py-4 rounded-full text-3xl font-medium">
-                    Read More
-                  </button>
+                    Learn More
+                    </button>
+                    </Link>
                 </div>
               </div>
             </div>

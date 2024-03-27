@@ -65,8 +65,9 @@ const createUserRequest = async (req, res) => {
       _id: newUserRequest._id,
     });
   } catch (error) {
+ 
     res.status(400);
-    throw new Error("Invalid user data");
+    // throw new Error("Invalid user data");
   }
 };
 module.exports = { getAllRequests, createUserRequest, verifyPassword };

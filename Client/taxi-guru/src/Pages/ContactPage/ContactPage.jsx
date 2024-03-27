@@ -241,7 +241,7 @@ export default function ContactPage() {
                     {...register("phoneNumber", validationOptions.phoneNumber)}
                     onChange={handleChange}
                     inputMode="numeric"
-                    className="border-b-2 border-gray- h-10 outline-none text-base w-full"
+                    className="border-b-2 border-gray- h-10 outline-none text-base w-full "
                   />
                   <small className="text-red-600">
                     {errors?.phoneNumber && errors.phoneNumber.message}
@@ -250,21 +250,33 @@ export default function ContactPage() {
               </div>
 
               <div className="mb-4 text-lg w-full">
-                <label htmlFor="Journey Type">Journey Type</label>
+                <label htmlFor="Journey Type" className="block my-2">Journey Type</label>
+                <div className="flex justify-cenjter gap-24">
+           
+                <div>
+
                 <input
                   type="radio"
                   name="journeyType"
-                  value="Single"
+                      value="Single"
+                      className="h-6 w-6 align-top m-0 mx-2"
                   onChange={handleChange}
-                ></input>
-                  <label htmlFor="Single">Single</label> {" "}
+                  ></input>
+                 <label htmlFor="Single" className="">Single</label>
+                  </div>
+                <div>
+
                 <input
                   type="radio"
                   name="journeyType"
-                  value="Double"
+                      value="Double"
+                      className="h-6 w-6 align-top m-0 mx-2 "
+                      
                   onChange={handleChange}
-                ></input>
-                  <label htmlFor="Double">Double</label>
+                  ></input>
+                 <label htmlFor="Double">Double</label>
+                </div>
+                </div>
                 {/* <input
                   type="text"
                   name="journeyType"

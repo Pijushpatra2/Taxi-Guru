@@ -65,7 +65,7 @@ function AboutPage() {
         </h1>
 
         <div className="   gap-4  md:flex text-center  mb-4">
-          <div className="my-4 md:my-0">
+          <div className="my-4 md:my-0 flex-1">
             <img
               src={gallery1}
               alt="gallery"
@@ -76,36 +76,32 @@ function AboutPage() {
             <p className="text-lg px-4">
               For us, your security is our first concern. Our fleet goes through
               customary support, and our expert drivers, dependent upon thorough
-              historical verifications, focus on your prosperity.  
+              historical verifications, focus on your prosperity.
             </p>
           </div>
-          <div className="my-4 md:my-0">
+          <div className="my-4 md:my-0 flex-1">
             <img src={gallery2} alt="gallery" className="w-full  object-fit" />
-            <h3 className=" my-3 text-2xl">Safety Assurance</h3>
+            <h3 className=" my-3 text-2xl">Reliable Service</h3>
 
             <p className="text-lg px-4">
-              For us, your security is our first concern. Our fleet goes through
-              customary support, and our expert drivers, dependent upon thorough
-              historical verifications, focus on your prosperity.  
+            Rely on “the taxi guru” for reliable and trustworthy transportation. Our obligation to provoke administration guarantees you arrive at your objective on time, without fail. 
             </p>
           </div>
-          <div className="my-4 md:my-0">
+          <div className="my-4 md:my-0 flex-1">
             <img src={gallery3} alt="gallery" className="w-full  object-fit" />
-            <h3 className=" my-3 text-2xl">Safety Assurance</h3>
+            <h3 className=" my-3 text-2xl">Affordability</h3>
 
             <p className="text-lg px-4">
-              For us, your security is our first concern. Our fleet goes through
-              customary support, and our expert drivers, dependent upon thorough
-              historical verifications, focus on your prosperity.  
+            we have confidence in conveying quality transportation at open rates. Our obligation to moderateness guarantees you partake in an agreeable and solid excursion without settling for less on help greatness.
             </p>
           </div>
         </div>
 
         {/*section*/}
 
-        <div className="h-auto   flex flex-wrap md:flex-nowrap gap-4 justify-around  ">
-          <img className="w-[45%]" src={section1} alt="section" />
-          <img className="w-[45%]" src={section2} alt="section" />
+        <div className="  flex flex-wrap lg:flex-nowrap gap-4 justify-around  ">
+          <img className="flex-1 md:w-[45%]" src={section1} alt="section" />
+          <img className="flex-1 md:w-[45%]" src={section2} alt="section" />
         </div>
 
         {/*book*/}

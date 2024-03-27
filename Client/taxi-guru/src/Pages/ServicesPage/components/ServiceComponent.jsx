@@ -1,5 +1,7 @@
 import Slider from "./Slider";
 import { HiPhone } from "react-icons/hi";
+
+
 import ServiceData from "../data/ServiceData";
 import home_taxi from "/images/home/home_taxi.png";
 // import CountUpComponent from "../../HomePage/components/CountUpComponent";

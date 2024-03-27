@@ -57,9 +57,14 @@ export default function AdminPage() {
         setAllowView(true);
       }
     } catch (err) {
-      console.log(error);
       if (err.response) {
-        setError(err.response.data.message);
+        try {
+          setError(err.response.data.message);
+        }
+        catch (err) {
+        setError("An error occurred. Please try again later.");
+          
+        }
       } else {
         setError("An error occurred. Please try again later.");
       }
@@ -77,7 +82,7 @@ export default function AdminPage() {
               onChange={(e) => {
                 setPassCode(e.target.value);
               }}
-              className="border-b-2 border-gray h-12 text-base w-full"
+              className="border-b-2 border-gray h-12 text-base w-full px-2"
             />
             <button
               className="mx-4 py-2 px-4 bg-primary rounded-lg"

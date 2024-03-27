@@ -17,13 +17,13 @@ export default function HowItWorks() {
             <div className="h-24 w-24 bg-white rounded-full flex items-center justify-center p-2">
               <img src={image} alt="" />
             </div>
-            <div className="text-xl">Call</div>
+            <div className="text-xl">Choose a car</div>
           </div>
           <div className="flex flex-col items-center justify-center  gap-3">
             <div className="h-24 w-24 bg-white rounded-full flex items-center justify-center p-2">
               <img src={image} alt="" />
             </div>
-            <div className="text-xl">Call</div>
+            <div className="text-xl">Enjoy the ride</div>
           </div>
         </div>
       </div>

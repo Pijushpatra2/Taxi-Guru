@@ -35,15 +35,15 @@ const ServiceData = {
   },
   diamonds: {
     t1: "expirenced drivers",
-    img1: "/images/services/suv.png",
+    img1: "/images/home/Taxi.png",
     t2: "24 X 7 fast Booking",
-    img2: "/images/services/suv.png",
+    img2: "/images/home/Rupee.png",
 
     t3: "No extra charges",
-    img3: "/images/services/suv.png",
+    img3: "/images/home/Speed.png",
 
     t4: "Local Knowledge",
-    img4: "/images/services/suv.png",
+    img4: "/images/home/CustomerCare.png",
   },
   C2D: {
     div1: {

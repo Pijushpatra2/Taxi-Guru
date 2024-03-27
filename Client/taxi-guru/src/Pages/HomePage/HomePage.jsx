@@ -5,6 +5,8 @@ import Footer from "../../Common/components/Footer";
 import home1 from "/images/home/home_1.jpeg";
 import TabBar from "./components/TabBar";
 import about_img from "/images/home/Customer.png";
+import { Link } from "react-router-dom";
+
 import services_img from "/images/home/Taxi.png";
 import Contactform_img from "/images/home/Contactform.png";
 import rupi from "/images/home/Rupee.png";
@@ -80,6 +82,7 @@ export default function HomePage() {
             Book Your Ride in Only a Couple of clicks!
           </p>
           <div className="lg:flex flex-wrap items-center justify-center  mt-4  gap-16">
+                <Link to="/contact-us">
             <div className="flex flex-col justify-center items-center  ">
               <div className="h-[80px] bg-primary w-[224px] rounded-3xl z-0"></div>
               <div className="relative bottom-12 w-[350px] h-[250px] z-10 group overflow-hidden">
@@ -87,20 +90,28 @@ export default function HomePage() {
 
                 <p className=" overflow-hidden w-full  text-center bg-right-bottom bg-gradient-to-l font-bold text-3xl absolute top-[40%]  -translate-x-96     bg-no-repeat group-hover:translate-x-0   transition-all duration-500 ease-out  ">
                   SEDAN
-                </p>
+                  </p>
+
               </div>
               <div className="h-[30px] relative  bottom-20 bg-primary w-[224px] rounded-t-3xl z-20"></div>
             </div>
+                  </Link>
+                <Link to="/contact-us">
             <div className="flex flex-col justify-center items-center">
               <div className="h-[80px] bg-primary w-[224px] rounded-3xl z-0"></div>
               <div className="relative bottom-12 w-[350px] h-[250px] z-10 group overflow-hidden ">
                 <img className="h-[100%] w-[100%]" src={car2} alt="" />
+
                 <p className=" overflow-hidden w-full  text-center bg-right-bottom bg-gradient-to-l font-bold text-3xl absolute top-[40%]  -translate-x-96     bg-no-repeat group-hover:translate-x-0   transition-all duration-500 ease-out  ">
                   SUV
+            
                 </p>
+            
               </div>
               <div className="h-[30px] relative  bottom-20 bg-primary w-[224px] rounded-t-3xl z-20"></div>
             </div>
+                </Link>
+                <Link to="/contact-us">
             <div className="flex flex-col justify-center items-center  ">
               <div className="h-[80px] bg-primary w-[224px] rounded-3xl z-0"></div>
               <div className="relative bottom-12 w-[350px] h-[250px] z-10 group overflow-hidden">
@@ -108,9 +119,11 @@ export default function HomePage() {
                 <p className="overflow-hidden w-full  text-center bg-right-bottom bg-gradient-to-l font-bold text-3xl absolute top-[40%]  -translate-x-96     bg-no-repeat group-hover:translate-x-0   transition-all duration-500 ease-out  ">
                   HATCHBACK
                 </p>
+               
               </div>
               <div className="h-[30px] relative  bottom-20 bg-primary w-[224px] rounded-t-3xl z-20"></div>
             </div>
+                    </Link>
           </div>
         </div>
 
