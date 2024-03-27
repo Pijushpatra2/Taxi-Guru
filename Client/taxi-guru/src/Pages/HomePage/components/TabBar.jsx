@@ -64,7 +64,7 @@ function TabBar() {
                 value={end} // ...force the select's value to match the state variable...
                 onChange={(e) => setEnd(e.target.value)} // ... and update the state variable on any change!
               >
-                <option value="candigarh">Chandigarh</option>
+                <option value="chandigarh">Chandigarh</option>
                 <option value="punjab">Punjab</option>
                 <option value="haryana">Haryana</option>
                 <option value="himachal">Himachal</option>
