@@ -112,14 +112,14 @@ function AboutPage() {
           </h1>
 
           <p className=" w-[100%]  mt-2 p-2 text-center  sm:text-2xl  ">
-             Booking a ride with “the taxi guru” is fast and hassle-free. Choose
-            the method that suits you best – use our easy to use user-friendly
+            Booking a ride with “the taxi guru” is fast and hassle-free. Choose
+            the method that suits you best - use our easy to use user-friendly
             app for consistent online appointments, visit our site to reserve a
             spot, or essentially call us. Our devoted client support group is
             prepared to help you. Partake in the accommodation of efficient
             booking, and trust us to give a reliable and agreeable excu ion
             custom-made to your inclinations. Any place you’re going, “the taxi
-            guru” is here to make your movement experience smooth and peaceful. 
+            guru” is here to make your movement experience smooth and peaceful.
           </p>
         </div>
 

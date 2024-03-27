@@ -1,8 +1,5 @@
-import React, { useState } from "react";
-import Ellipse1 from "/images/contact/Ellipse 793.png";
-import Ellipse2 from "/images/contact/Ellipse 794.png";
+import { useState } from "react";
 import Footer from "../../Common/components/Footer";
-import Map from "/images/contact/Map.png";
 import { styles } from "../../Style";
 import axios from "axios";
 import { useForm } from "react-hook-form";

@@ -2,11 +2,9 @@ import Cards from "./components/Cards";
 import home_taxi from "/images/home/home_taxi.png";
 import CountUpComponent from "./components/CountUpComponent";
 import Footer from "../../Common/components/Footer";
-import home1 from "/images/home/home_1.jpeg";
 import TabBar from "./components/TabBar";
 import about_img from "/images/home/Customer.png";
 import { Link } from "react-router-dom";
-
 import services_img from "/images/home/Taxi.png";
 import Contactform_img from "/images/home/Contactform.png";
 import rupi from "/images/home/Rupee.png";

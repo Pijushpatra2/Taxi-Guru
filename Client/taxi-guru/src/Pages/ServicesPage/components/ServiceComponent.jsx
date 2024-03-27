@@ -42,7 +42,6 @@ export default function ServiceComponent(props) {
             allowfullscreen=""
             className="w-full h-screen"
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
       </section>
