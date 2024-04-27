@@ -8,7 +8,7 @@ function TabBar() {
     setActiveTab(tab);
   };
   return (
-    <div className="relative bottom-28">
+    <div className="relative lg:bottom-28 bottom-29">
       <div className="flex flex-row justify-center text-white text-center text-3xl">
         <div
           className={`${
@@ -83,7 +83,6 @@ function TabBar() {
         )}
         {activeTab === "tab3" && (
           <div className="bg-primary h-36  flex justify-around items-center">
-            {" "}
             TAB 3
           </div>
         )}
