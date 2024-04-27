@@ -15,8 +15,8 @@ const createUserRequestValidation = [
       return false;
     }
   }),
-  body("pickupAddress", "Enter Full Pickup address").isLength({ min: 5 }),
-  body("dropAddress", "Enter Full Drop address").isLength({ min: 5 }),
+  body("pickupAddress", "Enter Full Pickup address").isLength({ min: 2 }),
+  body("dropAddress", "Enter Full Drop address").isLength({ min: 2 }),
 ];
 
 const validate = (req, res, next) => {
